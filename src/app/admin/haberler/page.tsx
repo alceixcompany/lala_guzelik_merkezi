@@ -339,9 +339,9 @@ const AdminNews = () => {
 
       {/* Add/Edit News Modal */}
       {showAddModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg max-w-6xl w-full h-[95vh] flex flex-col shadow-2xl">
-            <div className="p-6 border-b border-gray-200 flex-shrink-0 flex justify-between items-center bg-gray-50">
+        <div className="admin-modal-overlay fixed inset-0 flex items-center justify-center z-50 p-4">
+          <div className="admin-modal-panel max-w-6xl w-full h-[95vh] flex flex-col shadow-2xl">
+            <div className="admin-modal-header p-6 flex-shrink-0 flex justify-between items-center">
               <h3 className="text-lg font-semibold text-gray-900">
                 {editingHaber ? 'Haber Düzenle' : 'Yeni Haber Ekle'}
               </h3>
@@ -362,7 +362,7 @@ const AdminNews = () => {
             </div>
             
             <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
-              <div className="flex-1 overflow-y-auto p-6 space-y-4">
+              <div className="admin-modal-body flex-1 overflow-y-auto p-6 space-y-4">
               {/* Temel Bilgiler - Üstte */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -454,7 +454,7 @@ const AdminNews = () => {
               {/* İçerik - En Altta */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">İçerik *</label>
-                <div className="border border-gray-300 rounded-lg">
+                <div className="admin-editor-shell">
                   <CKEditorComponent
                     value={haberForm.content}
                     onChange={(data) => setHaberForm({...haberForm, content: data})}
@@ -467,7 +467,7 @@ const AdminNews = () => {
               </div>
               
               {/* Fixed Bottom Buttons */}
-              <div className="flex-shrink-0 border-t border-gray-200 p-6">
+              <div className="admin-modal-footer flex-shrink-0 p-6">
                 <div className="flex gap-3">
                   <button
                     type="button"

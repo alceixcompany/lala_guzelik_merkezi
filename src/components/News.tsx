@@ -66,12 +66,12 @@ const News = () => {
 
   if (loading) {
     return (
-      <section className="bg-[#f8f2e9] py-20 sm:py-24">
+      <section className="lale-dark-section py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-7 lg:px-10">
           <div className="flex flex-col items-center justify-center text-center">
-            <div className="h-12 w-12 animate-spin rounded-full border-4 border-[#cda56a] border-t-transparent" />
-            <p className="mt-4 text-sm tracking-[0.16em] text-[#7c6a56]">
-              GUNCEL ICERIKLER HAZIRLANIYOR
+            <div className="h-12 w-12 animate-spin rounded-full border-4 border-[var(--lale-gold)] border-t-transparent" />
+            <p className="mt-4 text-sm tracking-[0.16em] text-[var(--lale-ivory)]">
+              GÜNCEL İÇERİKLER HAZIRLANIYOR
             </p>
           </div>
         </div>
@@ -86,30 +86,26 @@ const News = () => {
   const [featuredNews, ...otherNews] = haberler;
 
   return (
-    <section className="relative overflow-hidden bg-[#f8f2e9] py-24 sm:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.9),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(194,157,103,0.12),transparent_28%)]" />
-
+    <section className="lale-dark-section py-24 sm:py-28">
       <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[#dcc29d] bg-white/80 px-6 py-3 text-sm font-medium tracking-[0.18em] text-[#b3874b] shadow-[0_12px_30px_rgba(191,151,96,0.08)] backdrop-blur">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d7ad6d]" />
-            GUNCEL NOTLAR
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d7ad6d]" />
+          <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
+            GÜNCEL NOTLAR
           </div>
 
-          <h2 className="mt-8 font-serif text-4xl leading-tight text-[#171717] sm:text-5xl">
-            Guzellik dunyasindan ilham veren
-            <span className="block text-[#b88b4c]">bakim ve trend icerikleri</span>
+          <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
+            Güzellik dünyasından ilham veren
+            <span className="block text-[var(--lale-gold)]">bakım ve trend içerikleri</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#60584f]">
-            Merkezimizde uyguladigimiz bakim yaklasimlari, sezonun one cikan
-            onerileri ve guzellik rutinlerinize eslik edecek pratik bilgiler.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
+            Merkezimizde uyguladığımız bakım yaklaşımları, sezonun öne çıkan
+            önerileri ve güzellik rutinlerinize eşlik edecek pratik bilgiler.
           </p>
         </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-          <article className="overflow-hidden rounded-[34px] border border-[#eadcc8] bg-white/80 shadow-[0_24px_80px_rgba(124,96,54,0.08)] backdrop-blur">
+          <article className="lale-card-dark overflow-hidden rounded-[10px]">
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px]">
                 {featuredNews.imageUrl ? (
@@ -117,17 +113,17 @@ const News = () => {
                     src={featuredNews.imageUrl}
                     alt={featuredNews.title}
                     fill
-                    className="object-cover"
+                    className="object-cover grayscale"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 ) : (
-                  <div className="flex h-full min-h-[320px] items-center justify-center bg-[linear-gradient(135deg,#f3e7d6,#fbf6ef)] text-6xl text-[#c79e62]">
+                  <div className="flex h-full min-h-[320px] items-center justify-center bg-[linear-gradient(135deg,#06231f,#0d4d3f)] text-6xl text-[var(--lale-gold)]">
                     ✦
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1e1a16]/25 to-transparent" />
-                <div className="absolute left-6 top-6 rounded-full bg-white/88 px-4 py-2 text-xs font-medium tracking-[0.16em] text-[#9f7740] backdrop-blur">
-                  ONE CIKAN YAZI
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06231f]/72 to-transparent" />
+                <div className="absolute left-6 top-6 rounded-full border border-[rgba(212,175,55,0.48)] bg-[rgba(6,35,31,0.74)] px-4 py-2 text-xs font-medium tracking-[0.16em] text-[var(--lale-gold)] backdrop-blur">
+                  ÖNE ÇIKAN YAZI
                 </div>
               </div>
 
@@ -137,17 +133,17 @@ const News = () => {
                     {new Date(featuredNews.createdAt).toLocaleDateString('tr-TR')}
                   </p>
 
-                  <h3 className="mt-4 font-serif text-3xl leading-tight text-[#171717]">
+                  <h3 className="mt-4 font-serif text-3xl leading-tight text-[var(--lale-ivory)]">
                     {featuredNews.title}
                   </h3>
 
                   {featuredNews.subtitle && (
-                    <p className="mt-4 text-base leading-7 text-[#5e574f]">
+                    <p className="mt-4 text-base leading-7 text-[rgba(251,250,246,0.76)]">
                       {featuredNews.subtitle}
                     </p>
                   )}
 
-                  <p className="mt-5 text-sm leading-7 text-[#6a645d]">
+                  <p className="mt-5 text-sm leading-7 text-[rgba(251,250,246,0.66)]">
                     {featuredNews.description}
                   </p>
 
@@ -156,7 +152,7 @@ const News = () => {
                       {featuredNews.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-[#ead6b9] bg-[#faf4ec] px-3 py-1 text-xs text-[#a17a45]"
+                          className="rounded-full border border-[rgba(212,175,55,0.34)] bg-[rgba(13,77,63,0.45)] px-3 py-1 text-xs text-[var(--lale-gold)]"
                         >
                           #{tag}
                         </span>
@@ -168,9 +164,9 @@ const News = () => {
                 <div className="mt-8">
                   <Link
                     href={`/haberler/${createSlug(featuredNews.title)}`}
-                    className="inline-flex items-center gap-3 rounded-full bg-[#b88b4c] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white transition-colors hover:bg-[#a4763c]"
+                    className="lale-gold-button gap-3"
                   >
-                    Yaziyi Oku
+                    Yazıyı Oku
                     <FiArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -182,45 +178,45 @@ const News = () => {
             {otherNews.map((haber) => (
               <article
                 key={haber.id}
-                className="rounded-[30px] border border-[#eadcc8] bg-white/80 p-5 shadow-[0_20px_50px_rgba(124,96,54,0.07)] transition-transform duration-300 hover:-translate-y-1"
+                className="lale-card-dark rounded-[10px] p-5 transition-transform duration-300 hover:-translate-y-1"
               >
                 <div className="flex gap-4">
-                  <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl bg-[#f5eadc]">
+                  <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-[8px] bg-[rgba(13,77,63,0.44)]">
                     {haber.imageUrl ? (
                       <Image
                         src={haber.imageUrl}
                         alt={haber.title}
                         fill
-                        className="object-cover"
+                        className="object-cover grayscale"
                         sizes="112px"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center text-3xl text-[#c79e62]">
+                      <div className="flex h-full w-full items-center justify-center text-3xl text-[var(--lale-gold)]">
                         ✦
                       </div>
                     )}
                   </div>
 
                   <div className="min-w-0 flex-1">
-                    <p className="text-xs tracking-[0.14em] text-[#a17a45]">
+                    <p className="text-xs tracking-[0.14em] text-[var(--lale-gold)]">
                       {new Date(haber.createdAt).toLocaleDateString('tr-TR')}
                     </p>
 
                     <Link href={`/haberler/${createSlug(haber.title)}`}>
-                      <h3 className="mt-2 line-clamp-2 text-xl font-semibold text-[#1e1e1e] transition-colors hover:text-[#b88b4c]">
+                      <h3 className="mt-2 line-clamp-2 text-xl font-semibold text-[var(--lale-ivory)] transition-colors hover:text-[var(--lale-gold)]">
                         {haber.title}
                       </h3>
                     </Link>
 
-                    <p className="mt-3 line-clamp-3 text-sm leading-7 text-[#676058]">
+                    <p className="mt-3 line-clamp-3 text-sm leading-7 text-[rgba(251,250,246,0.66)]">
                       {haber.description}
                     </p>
 
                     <Link
                       href={`/haberler/${createSlug(haber.title)}`}
-                      className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#a4763c] transition-colors hover:text-[#8f6734]"
+                      className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[var(--lale-gold)] transition-colors hover:text-[var(--lale-gold-soft)]"
                     >
-                      Devamini Oku
+                      Devamını Oku
                       <FiArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
@@ -233,9 +229,9 @@ const News = () => {
         <div className="mt-14 text-center">
           <Link
             href="/haberler"
-            className="inline-flex items-center justify-center rounded-full border border-[#d7b687] bg-white/70 px-8 py-3 text-sm font-semibold tracking-[0.08em] text-[#a4763c] transition-colors hover:bg-[#fbf3e7]"
+            className="lale-outline-button"
           >
-            Tum Icerikleri Gor
+            Tüm İçerikleri Gör
           </Link>
         </div>
       </div>

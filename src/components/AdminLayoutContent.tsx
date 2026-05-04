@@ -12,11 +12,11 @@ const AdminLayoutContent: React.FC<AdminLayoutContentProps> = ({ children }) => 
   const isLoginPage = pathname === '/admin/login';
 
   if (isLoginPage) {
-    return <>{children}</>;
+    return <div className="admin-theme min-h-screen">{children}</div>;
   }
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="admin-theme flex h-screen">
       <AdminSidebar />
       <div className="flex-1 flex flex-col overflow-hidden lg:ml-0">
         <main className="flex-1 relative overflow-y-auto focus:outline-none">

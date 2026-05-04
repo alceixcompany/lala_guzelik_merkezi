@@ -118,13 +118,13 @@ const HaberDetay = () => {
   // Haber bulunamadıysa 404
   if (!haber && !loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="lale-dark-section min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Haber Bulunamadı</h1>
-          <p className="text-gray-600 mb-8">Aradığınız haber mevcut değil.</p>
+          <h1 className="text-4xl font-bold text-[var(--lale-ivory)] mb-4">Haber Bulunamadı</h1>
+          <p className="text-[rgba(251,250,246,0.68)] mb-8">Aradığınız haber mevcut değil.</p>
           <Link 
             href="/haberler"
-            className="bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-colors"
+            className="lale-gold-button"
           >
             Haberlere Dön
           </Link>
@@ -135,19 +135,19 @@ const HaberDetay = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="lale-dark-section min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-amber-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Haber yükleniyor...</p>
+          <div className="w-12 h-12 border-4 border-[var(--lale-gold)] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-[rgba(251,250,246,0.68)]">Haber yükleniyor...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white ">
+    <div className="page-flow min-h-screen bg-[var(--lale-emerald-deep)]">
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 lg:h-96">
+      <div className="lale-page-hero h-64 md:h-80 lg:h-96">
         <Image 
           src="/banner/guzelik_merkezi.png" 
           alt="Haberler Hero"
@@ -155,22 +155,22 @@ const HaberDetay = () => {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,35,31,0.62),rgba(6,35,31,0.82))]"></div>
       </div>
 
       {/* Breadcrumb Navigation */}
-      <div className="border-b border-gray-100 bg-gray-50">
+      <div className="border-b border-[rgba(212,175,55,0.12)] bg-[rgba(6,35,31,0.92)]">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-amber-600 transition-colors">
+            <Link href="/" className="text-[rgba(251,250,246,0.52)] hover:text-[var(--lale-gold)] transition-colors">
               Ana Sayfa
             </Link>
-            <span className="text-gray-400">/</span>
-            <Link href="/haberler" className="text-gray-500 hover:text-amber-600 transition-colors">
+            <span className="text-[rgba(251,250,246,0.32)]">/</span>
+            <Link href="/haberler" className="text-[rgba(251,250,246,0.52)] hover:text-[var(--lale-gold)] transition-colors">
               Haberler
             </Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-gray-900 font-semibold truncate max-w-xs">
+            <span className="text-[rgba(251,250,246,0.32)]">/</span>
+            <span className="text-[var(--lale-ivory)] font-semibold truncate max-w-xs">
               {haber?.title}
             </span>
           </nav>
@@ -184,32 +184,32 @@ const HaberDetay = () => {
           {/* Featured Badge */}
           {haber?.featured && (
             <div className="mb-6">
-              <span className="inline-block bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+              <span className="inline-block bg-[var(--lale-gold)] text-[var(--lale-emerald-deep)] px-4 py-2 rounded-full text-sm font-medium">
                 ⭐ Öne Çıkan Haber
               </span>
             </div>
           )}
 
           {/* Main Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--lale-ivory)] mb-6 leading-tight">
             {haber?.title}
           </h1>
 
           {/* Subtitle */}
           {haber?.subtitle && (
-            <p className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed max-w-3xl">
+            <p className="text-lg md:text-xl text-[rgba(251,250,246,0.68)] mb-6 leading-relaxed max-w-3xl">
               {haber.subtitle}
             </p>
           )}
 
           {/* Description */}
           <div 
-            className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl prose prose-lg max-w-none"
+            className="text-lg text-[rgba(251,250,246,0.68)] mb-8 leading-relaxed max-w-3xl prose prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: haber?.description || '' }}
           />
 
           {/* Article Meta */}
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-8">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-[rgba(251,250,246,0.52)] mb-8">
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -234,7 +234,7 @@ const HaberDetay = () => {
 
           {/* Social Share Buttons */}
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-sm font-medium text-gray-700">Paylaş:</span>
+            <span className="text-sm font-medium text-[rgba(251,250,246,0.68)]">Paylaş:</span>
             <button
               onClick={shareOnFacebook}
               className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
@@ -294,21 +294,21 @@ const HaberDetay = () => {
         <article className="mb-16">
           <div className="max-w-3xl mx-auto">
             <div 
-              className="prose prose-gray prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:text-gray-700 prose-strong:text-gray-900 prose-a:text-amber-600 prose-a:no-underline hover:prose-a:underline"
+              className="prose prose-lg max-w-none prose-headings:text-[var(--lale-ivory)] prose-p:text-[rgba(251,250,246,0.72)] prose-li:text-[rgba(251,250,246,0.72)] prose-strong:text-[var(--lale-ivory)] prose-a:text-[var(--lale-gold)] prose-a:no-underline hover:prose-a:underline"
               dangerouslySetInnerHTML={{ __html: haber?.content || '' }}
             />
           </div>
         </article>
 
         {/* Article Footer */}
-        <footer className="border-t border-gray-100 pt-8 mb-16">
+        <footer className="border-t border-[rgba(212,175,55,0.12)] pt-8 mb-16">
           <div className="flex flex-wrap items-center justify-between gap-4">
             {haber?.tags && haber.tags.length > 0 && (
               <div className="flex items-center gap-4">
-                <span className="text-sm text-gray-500">Etiketler:</span>
+                <span className="text-sm text-[rgba(251,250,246,0.52)]">Etiketler:</span>
                 <div className="flex flex-wrap gap-2">
                   {haber.tags.map((tag, index) => (
-                    <span key={index} className="px-3 py-1 bg-amber-100 text-amber-700 text-sm rounded-full">
+                    <span key={index} className="px-3 py-1 bg-[rgba(212,175,55,0.10)] text-[var(--lale-gold)] text-sm rounded-full border border-[rgba(212,175,55,0.18)]">
                       #{tag}
                     </span>
                   ))}
@@ -317,8 +317,8 @@ const HaberDetay = () => {
             )}
             
             <div className="flex items-center gap-4">
-              <span className="text-sm text-gray-500">Oluşturulma:</span>
-              <span className="text-sm font-medium text-gray-900">
+              <span className="text-sm text-[rgba(251,250,246,0.52)]">Oluşturulma:</span>
+              <span className="text-sm font-medium text-[var(--lale-ivory)]">
                 {new Date(haber?.createdAt || '').toLocaleDateString('tr-TR')}
               </span>
             </div>
@@ -326,14 +326,14 @@ const HaberDetay = () => {
         </footer>
 
         {/* Divider */}
-        <div className="border-t border-gray-100 my-16"></div>
+        <div className="border-t border-[rgba(212,175,55,0.12)] my-16"></div>
 
         {/* Related Articles */}
         {relatedHaberler.length > 0 && (
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-1 h-8 bg-amber-600 rounded-full"></div>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <div className="w-1 h-8 bg-[var(--lale-gold)] rounded-full"></div>
+              <h3 className="text-2xl font-bold text-[var(--lale-ivory)]">
                 İlgili Haberler
               </h3>
             </div>
@@ -344,7 +344,7 @@ const HaberDetay = () => {
                   href={`/haberler/${createSlug(relatedHaber.title)}`}
                   className="group block"
                 >
-                  <article className="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-amber-200">
+                  <article className="lale-card-dark rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-[rgba(212,175,55,0.28)]">
                     {/* Image */}
                     <div className="relative h-48 overflow-hidden">
                       {relatedHaber.imageUrl ? (
@@ -360,7 +360,7 @@ const HaberDetay = () => {
                         </div>
                       )}
                       {relatedHaber.featured && (
-                        <div className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-medium px-2 py-1 rounded-full">
+                        <div className="absolute top-4 left-4 bg-[var(--lale-gold)] text-[var(--lale-emerald-deep)] text-xs font-medium px-2 py-1 rounded-full">
                           ⭐ Öne Çıkan
                         </div>
                       )}
@@ -368,18 +368,18 @@ const HaberDetay = () => {
 
                     {/* Content */}
                     <div className="p-6">
-                      <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                      <div className="flex items-center gap-2 text-xs text-[rgba(251,250,246,0.52)] mb-3">
                         <span>{new Date(relatedHaber.createdAt).toLocaleDateString('tr-TR')}</span>
                         <span>•</span>
                         <span>Sıra: {relatedHaber.order}</span>
                       </div>
-                      <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors line-clamp-2">
+                      <h4 className="font-semibold text-[var(--lale-ivory)] mb-2 group-hover:text-[var(--lale-gold)] transition-colors line-clamp-2">
                         {relatedHaber.title}
                       </h4>
                       {relatedHaber.subtitle && (
-                        <p className="text-sm text-gray-600 mb-2 font-medium">{relatedHaber.subtitle}</p>
+                        <p className="text-sm text-[rgba(251,250,246,0.66)] mb-2 font-medium">{relatedHaber.subtitle}</p>
                       )}
-                      <p className="text-gray-600 text-sm line-clamp-3">
+                      <p className="text-[rgba(251,250,246,0.66)] text-sm line-clamp-3">
                         {relatedHaber.description}
                       </p>
                       
@@ -389,7 +389,7 @@ const HaberDetay = () => {
                           {relatedHaber.tags.slice(0, 2).map((tag, index) => (
                             <span
                               key={index}
-                              className="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                              className="inline-block px-2 py-1 bg-[rgba(212,175,55,0.10)] text-[var(--lale-gold)] text-xs rounded-full"
                             >
                               #{tag}
                             </span>
@@ -408,7 +408,7 @@ const HaberDetay = () => {
         <div className="text-center">
           <Link 
             href="/haberler"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-amber-600 font-medium transition-colors group"
+            className="inline-flex items-center gap-2 text-[rgba(251,250,246,0.68)] hover:text-[var(--lale-gold)] font-medium transition-colors group"
           >
             <svg className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

@@ -62,8 +62,8 @@ const values = [
 
 const ServicesPage = () => {
   return (
-    <main className="bg-[#fbf6ef]">
-      <section className="relative h-[60vh] min-h-[450px] overflow-hidden flex items-center">
+    <main className="page-flow min-h-screen bg-[var(--lale-emerald-deep)]">
+      <section className="lale-page-hero flex min-h-[450px] h-[60vh] items-center">
         <div className="absolute inset-0">
           <Image
             src="/banner/hizmetlerimiz_banner.png"
@@ -74,47 +74,41 @@ const ServicesPage = () => {
             sizes="100vw"
             quality={90}
           />
-          {/* Elegant Overlay like About Page */}
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(247,241,232,0.95)_0%,rgba(247,241,232,0.8)_35%,rgba(247,241,232,0.4)_60%,transparent_100%)]" />
-          <div className="absolute inset-0 bg-black/5" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,35,31,0.96)_0%,rgba(6,35,31,0.90)_34%,rgba(6,35,31,0.62)_58%,rgba(6,35,31,0.18)_78%,rgba(6,35,31,0)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(13,77,63,0.42),rgba(6,35,31,0.16)_40%,transparent_66%)]" />
         </div>
         
         <div className="relative z-10 w-full mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
           <div className="max-w-2xl pt-[20px]">
             <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-12 bg-[#b89562]" />
-              <span className="text-sm tracking-[0.3em] text-[#343434] uppercase font-medium">PROFESYONEL ÇÖZÜMLER</span>
+              <span className="h-px w-12 bg-[var(--lale-gold)]" />
+              <span className="text-sm tracking-[0.3em] text-[var(--lale-gold)] uppercase font-medium">PROFESYONEL ÇÖZÜMLER</span>
             </div>
             
-            <h1 className="font-serif text-[64px] sm:text-[86px] leading-[0.9] text-[#111111] mb-6">
-              İmza <span className="block text-[#b78a49]">Bakımlar</span>
+            <h1 className="mb-6 font-serif text-[64px] leading-[0.9] text-[var(--lale-ivory)] sm:text-[86px]">
+              İmza <span className="block text-[var(--lale-gold)]">Bakımlar</span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-[#2d2d2d] leading-relaxed max-w-lg">
+            <p className="max-w-lg text-lg leading-relaxed text-[rgba(251,250,246,0.74)] sm:text-xl">
               Cildinize, bedeninize ve ruhunuza iyi gelecek uzman uygulamalarımızla tanışın.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#fcf8f3] py-24 sm:py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.95),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(191,151,96,0.12),transparent_30%)]" />
-        <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c9a56f]/50 to-transparent" />
-
+      <section className="lale-dark-section py-24 sm:py-28">
         <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-3 rounded-full border border-[#dbc29d] bg-white/75 px-6 py-3 text-sm font-medium tracking-[0.18em] text-[#b18449] shadow-[0_12px_30px_rgba(191,151,96,0.08)] backdrop-blur">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
+            <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
               İMZA BAKIMLAR
-              <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
             </div>
 
-            <h2 className="mt-8 font-serif text-4xl leading-tight text-[#171717] sm:text-5xl">
+            <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
               İhtiyacınıza göre şekillenen
-              <span className="block text-[#b88b4c]">premium bakım seçimleri</span>
+              <span className="block text-[var(--lale-gold)]">premium bakım seçimleri</span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#5f5a54]">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
               Her bakım öncesinde sizi dinliyor, beklentinize uygun uygulama akışını
               planlıyor ve sürecin tamamında konforu korumaya odaklanıyoruz.
             </p>
@@ -127,7 +121,7 @@ const ServicesPage = () => {
               return (
                 <article
                   key={service.slug}
-                  className="overflow-hidden rounded-[34px] border border-[#eadcc8] bg-white/80 shadow-[0_24px_80px_rgba(124,96,54,0.08)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_90px_rgba(124,96,54,0.12)]"
+                  className="lale-card-dark overflow-hidden rounded-[14px] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(212,175,55,0.42)] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)]"
                 >
                   <div className="grid md:grid-cols-[0.92fr_1.08fr]">
                     <div className="relative min-h-[280px] overflow-hidden">
@@ -138,21 +132,21 @@ const ServicesPage = () => {
                         className="object-cover transition-transform duration-700 hover:scale-[1.04]"
                         sizes="(max-width: 768px) 100vw, 40vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1f1811]/30 via-transparent to-transparent" />
-                      <div className="absolute left-5 top-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/88 text-[#b88b4c] shadow-sm backdrop-blur">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(6,35,31,0.48)] via-transparent to-transparent" />
+                      <div className="absolute left-5 top-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[rgba(6,35,31,0.78)] text-[var(--lale-gold)] shadow-sm backdrop-blur">
                         <Icon className="h-7 w-7" />
                       </div>
                     </div>
 
                     <div className="p-7 sm:p-8">
-                      <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#b18449]">
+                      <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--lale-gold)]">
                         Özel Bakım
                       </p>
-                      <h3 className="mt-3 font-serif text-3xl text-[#1a1a1a]">
+                      <h3 className="mt-3 font-serif text-3xl text-[var(--lale-ivory)]">
                         {service.title}
                       </h3>
 
-                      <p className="mt-4 text-sm leading-7 text-[#645f58] sm:text-base">
+                      <p className="mt-4 text-sm leading-7 text-[rgba(251,250,246,0.68)] sm:text-base">
                         {service.description}
                       </p>
 
@@ -160,10 +154,10 @@ const ServicesPage = () => {
                         {service.highlights.map((highlight) => (
                           <div
                             key={highlight}
-                            className="flex items-center gap-3 text-sm text-[#6c675f]"
+                            className="flex items-center gap-3 text-sm text-[rgba(251,250,246,0.70)]"
                           >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f8efe2]">
-                              <FiCheck className="h-4 w-4 text-[#c49a5e]" />
+                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(212,175,55,0.12)]">
+                              <FiCheck className="h-4 w-4 text-[var(--lale-gold)]" />
                             </div>
                             <span>{highlight}</span>
                           </div>
@@ -173,14 +167,14 @@ const ServicesPage = () => {
                       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                         <Link
                           href={`/hizmetlerimiz/${service.slug}`}
-                          className="inline-flex items-center justify-center gap-3 rounded-full bg-[#b88b4c] px-6 py-3 text-sm font-semibold tracking-[0.08em] text-white transition-colors hover:bg-[#a4763c]"
+                          className="lale-gold-button gap-3"
                         >
                           Detayları İncele
                           <FiArrowRight className="h-4 w-4" />
                         </Link>
                         <Link
                           href="/iletisim"
-                          className="inline-flex items-center justify-center rounded-full border border-[#d7b687] px-6 py-3 text-sm font-semibold tracking-[0.08em] text-[#a4763c] transition-colors hover:bg-[#fbf3e7]"
+                          className="lale-outline-button"
                         >
                           Randevu Oluştur
                         </Link>
@@ -194,23 +188,19 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#fcf6ee] py-24 sm:py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.92),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(191,151,96,0.12),transparent_30%)]" />
-
+      <section className="lale-dark-section py-24 sm:py-28">
         <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-3 rounded-full border border-[#dbc29d] bg-white/80 px-6 py-3 text-sm font-medium tracking-[0.18em] text-[#b18449] shadow-[0_12px_30px_rgba(191,151,96,0.08)] backdrop-blur">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
+            <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
               NEDEN LALA
-              <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
             </div>
 
-            <h2 className="mt-8 font-serif text-4xl leading-tight text-[#171717] sm:text-5xl">
+            <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
               Sonuçtan önce
-              <span className="block text-[#b88b4c]">deneyime de özen gösteriyoruz</span>
+              <span className="block text-[var(--lale-gold)]">deneyime de özen gösteriyoruz</span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#5f5a54]">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
               Merkezimize gelen herkesin kendini rahat, güvende ve özel hissetmesini
               önemsiyoruz. Bu anlayış, tüm hizmetlerimizin temelini oluşturuyor.
             </p>
@@ -223,15 +213,15 @@ const ServicesPage = () => {
               return (
                 <article
                   key={value.title}
-                  className="rounded-[30px] border border-[#eadcc8] bg-white/80 p-7 shadow-[0_20px_50px_rgba(124,96,54,0.07)]"
+                  className="lale-card-dark rounded-[14px] p-7"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f6ecdf] text-[#b88b4c] shadow-inner">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[rgba(212,175,55,0.12)] text-[var(--lale-gold)] shadow-inner">
                     <Icon className="h-7 w-7" />
                   </div>
-                  <h3 className="mt-5 font-serif text-2xl text-[#1f1f1f]">
+                  <h3 className="mt-5 font-serif text-2xl text-[var(--lale-ivory)]">
                     {value.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-7 text-[#645f58] sm:text-base">
+                  <p className="mt-4 text-sm leading-7 text-[rgba(251,250,246,0.68)] sm:text-base">
                     {value.description}
                   </p>
                 </article>
@@ -241,18 +231,16 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#f8f2e9] py-24 sm:py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.92),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(191,151,96,0.10),transparent_28%)]" />
-
+      <section className="lale-dark-section py-24 sm:py-28">
         <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-7 lg:px-10">
-          <div className="rounded-[34px] border border-[#e7d5bf] bg-[linear-gradient(90deg,rgba(255,255,255,0.82),rgba(249,239,226,0.96))] p-8 shadow-[0_20px_50px_rgba(124,96,54,0.06)] sm:p-10">
-            <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#b18449]">
+          <div className="lale-card-dark rounded-[14px] p-8 sm:p-10">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-[var(--lale-gold)]">
               Randevu Planlama
             </p>
-            <h2 className="mt-4 font-serif text-4xl text-[#1f1f1f] sm:text-5xl">
+            <h2 className="mt-4 font-serif text-4xl text-[var(--lale-ivory)] sm:text-5xl">
               Size en uygun bakım planını birlikte oluşturalım
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#655f57] sm:text-lg">
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[rgba(251,250,246,0.68)] sm:text-lg">
               İster ilk kez gelin ister rutininizi güçlendirmek isteyin, size en uygun
               uygulamayı birlikte belirleyelim ve keyifli bir merkez deneyimi planlayalım.
             </p>
@@ -260,14 +248,14 @@ const ServicesPage = () => {
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
                 href="/iletisim"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#b88b4c] px-8 py-4 text-sm font-semibold tracking-[0.08em] text-white transition-colors hover:bg-[#a4763c]"
+                className="lale-gold-button gap-3"
               >
                 İletişime Geçin
                 <FiArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/galeri"
-                className="inline-flex items-center justify-center rounded-full border border-[#d7b687] bg-white/70 px-8 py-4 text-sm font-semibold tracking-[0.08em] text-[#a4763c] transition-colors hover:bg-[#fbf3e7]"
+                className="lale-outline-button"
               >
                 Galeriyi İnceleyin
               </Link>

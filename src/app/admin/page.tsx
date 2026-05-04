@@ -330,15 +330,15 @@ const AdminDashboard = () => {
       <div className="mb-8">
         <div className="flex justify-between items-start mb-4">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Admin Dashboard</h1>
-            <p className="text-gray-600">Site içeriğinizi ve verilerinizi yönetin</p>
+            <h1 className="text-2xl font-bold text-[var(--lale-ivory)] mb-2">Admin Dashboard</h1>
+            <p className="text-[rgba(251,250,246,0.72)]">Site içeriğinizi ve verilerinizi yönetin</p>
           </div>
           
           {/* Admin oluşturma butonu - sadece statik admin için göster */}
           {user?.isStaticAdmin && (
             <button
               onClick={() => setShowCreateAdminModal(true)}
-              className="bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg transition-colors text-sm font-medium flex items-center gap-2"
+              className="rounded-full bg-[var(--lale-gold)] px-5 py-3 text-sm font-medium text-[var(--lale-emerald-deep)] shadow-[0_18px_38px_rgba(212,175,55,0.22)] transition-all hover:bg-[var(--lale-gold-soft)] flex items-center gap-2"
             >
               <FiUsers className="w-4 h-4" />
               Yeni Admin Oluştur
@@ -348,16 +348,16 @@ const AdminDashboard = () => {
 
         {/* Admin Bilgi Kartı */}
         {user && (
-          <div className="bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 rounded-lg p-4">
+          <div className="rounded-[28px] border border-[rgba(212,175,55,0.24)] bg-[linear-gradient(135deg,rgba(212,175,55,0.16),rgba(6,35,31,0.78))] p-5 shadow-[0_22px_60px_rgba(0,0,0,0.26)] backdrop-blur">
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center">
-                <FiUsers className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-[var(--lale-gold)] rounded-full flex items-center justify-center shadow-[0_14px_30px_rgba(212,175,55,0.22)]">
+                <FiUsers className="w-6 h-6 text-[var(--lale-emerald-deep)]" />
               </div>
               <div className="ml-4">
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="text-lg font-semibold text-[var(--lale-ivory)]">
                   Hoş geldiniz, {user.displayName || user.email}
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-[rgba(251,250,246,0.68)]">
                   {user.isStaticAdmin ? 'Statik Admin' : 'Veritabanı Admin'} • {user.email}
                 </p>
               </div>

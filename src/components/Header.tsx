@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
   const isAdminPage = pathname?.startsWith('/admin') || false;
   const isHomePage = pathname === '/';
-  const desktopLinkColor = isScrolled ? 'text-gray-700' : (isHomePage ? 'text-gray-800' : 'text-white');
+  const desktopLinkColor = isScrolled || isHomePage ? 'text-[#f8f4e8]' : 'text-[#f8f4e8]';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,8 +67,8 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/88 backdrop-blur-xl shadow-lg border-b border-[#eadcc8]/70' 
-        : 'bg-white lg:bg-transparent'
+        ? 'bg-[#06231f]/92 backdrop-blur-xl shadow-lg border-b border-[rgba(212,175,55,0.28)]' 
+        : 'bg-[#06231f]/94 lg:bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -88,32 +88,32 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
-            <Link href="/" className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-amber-50 hover:text-amber-600 ${
+            <Link href="/" className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[var(--lale-gold)] ${
               desktopLinkColor
             }`}>
               Ana Sayfa
             </Link>
-            <Link href="/hizmetlerimiz" className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-amber-50 hover:text-amber-600 ${
+            <Link href="/hizmetlerimiz" className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[var(--lale-gold)] ${
               desktopLinkColor
             }`}>
               Hizmetlerimiz
             </Link>
-            <Link href="/galeri" className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-amber-50 hover:text-amber-600 ${
+            <Link href="/galeri" className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[var(--lale-gold)] ${
               desktopLinkColor
             }`}>
               Galeri
             </Link>
-            <Link href="/haberler" className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-amber-50 hover:text-amber-600 ${
+            <Link href="/haberler" className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[var(--lale-gold)] ${
               desktopLinkColor
             }`}>
               Haberler
             </Link>
-            <Link href="/hakkimizda" className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-amber-50 hover:text-amber-600 ${
+            <Link href="/hakkimizda" className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[var(--lale-gold)] ${
               desktopLinkColor
             }`}>
               Hakkımızda
             </Link>
-            <Link href="/iletisim" className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-amber-50 hover:text-amber-600 ${
+            <Link href="/iletisim" className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[var(--lale-gold)] ${
               desktopLinkColor
             }`}>
               İletişim
@@ -122,19 +122,19 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+            className="lg:hidden p-2 rounded-lg border border-[rgba(212,175,55,0.28)] text-[var(--lale-gold)] transition-colors duration-200 hover:bg-[rgba(212,175,55,0.10)]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={isMenuOpen}
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`block w-5 h-0.5 bg-gray-600 transition-all duration-300 ${
+              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${
                 isMenuOpen ? 'rotate-45 translate-y-1.5' : 'translate-y-0'
               }`}></span>
-              <span className={`block w-5 h-0.5 bg-gray-600 transition-all duration-300 my-1 ${
+              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 my-1 ${
                 isMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}></span>
-              <span className={`block w-5 h-0.5 bg-gray-600 transition-all duration-300 ${
+              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${
                 isMenuOpen ? '-rotate-45 -translate-y-1.5' : 'translate-y-0'
               }`}></span>
             </div>
@@ -143,9 +143,9 @@ const Header = () => {
 
         {/* Mobile Menu Portal */}
         {isMenuOpen && typeof window !== 'undefined' && createPortal(
-          <div className="lg:hidden fixed inset-0 z-[9999] bg-white">
+          <div className="lg:hidden fixed inset-0 z-[9999] bg-[var(--lale-emerald-deep)] text-[var(--lale-ivory)]">
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[rgba(212,175,55,0.26)]">
               <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
                 <Image 
                   src="/Lala_logo.png"
@@ -158,10 +158,10 @@ const Header = () => {
               </Link>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                className="p-2 rounded-lg text-[var(--lale-gold)] hover:bg-[rgba(212,175,55,0.10)] transition-colors duration-200"
                 aria-label="Close mobile menu"
               >
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -172,42 +172,42 @@ const Header = () => {
               <div className="space-y-3">
                 <Link 
                   href="/" 
-                  className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-200" 
+                  className="block border-b border-[rgba(212,175,55,0.16)] px-4 py-4 text-sm font-medium tracking-[0.12em] text-[var(--lale-ivory)] transition-colors duration-200 hover:text-[var(--lale-gold)]" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Ana Sayfa
                 </Link>
                 <Link 
                   href="/hizmetlerimiz" 
-                  className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-200" 
+                  className="block border-b border-[rgba(212,175,55,0.16)] px-4 py-4 text-sm font-medium tracking-[0.12em] text-[var(--lale-ivory)] transition-colors duration-200 hover:text-[var(--lale-gold)]" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Hizmetlerimiz
                 </Link>
                 <Link 
                   href="/galeri" 
-                  className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-200" 
+                  className="block border-b border-[rgba(212,175,55,0.16)] px-4 py-4 text-sm font-medium tracking-[0.12em] text-[var(--lale-ivory)] transition-colors duration-200 hover:text-[var(--lale-gold)]" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Galeri
                 </Link>
                 <Link 
                   href="/haberler" 
-                  className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-200" 
+                  className="block border-b border-[rgba(212,175,55,0.16)] px-4 py-4 text-sm font-medium tracking-[0.12em] text-[var(--lale-ivory)] transition-colors duration-200 hover:text-[var(--lale-gold)]" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Haberler
                 </Link>
                 <Link 
                   href="/hakkimizda" 
-                  className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-200" 
+                  className="block border-b border-[rgba(212,175,55,0.16)] px-4 py-4 text-sm font-medium tracking-[0.12em] text-[var(--lale-ivory)] transition-colors duration-200 hover:text-[var(--lale-gold)]" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Hakkımızda
                 </Link>
                 <Link 
                   href="/iletisim" 
-                  className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-200" 
+                  className="block border-b border-[rgba(212,175,55,0.16)] px-4 py-4 text-sm font-medium tracking-[0.12em] text-[var(--lale-ivory)] transition-colors duration-200 hover:text-[var(--lale-gold)]" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   İletişim

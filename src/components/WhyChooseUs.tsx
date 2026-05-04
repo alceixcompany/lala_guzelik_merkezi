@@ -10,24 +10,20 @@ const WhyChooseUs = () => {
   return (
     <section
       id="hakkimizda"
-      className="relative overflow-hidden bg-[#fcf6ee] py-24 sm:py-28"
+      className="lale-dark-section py-24 sm:py-28"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.92),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(191,151,96,0.12),transparent_30%)]" />
-
       <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[#dbc29d] bg-white/80 px-6 py-3 text-sm font-medium tracking-[0.18em] text-[#b18449] shadow-[0_12px_30px_rgba(191,151,96,0.08)] backdrop-blur">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
+          <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
             NEDEN BİZİ SEÇERLER
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
           </div>
 
-          <h2 className="mt-8 font-serif text-4xl leading-tight text-[#171717] sm:text-5xl">
+          <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
             Güzelliğinize sadece uygulama değil,
-            <span className="block text-[#b88b4c]">özel bir ilgi sunuyoruz</span>
+            <span className="block text-[var(--lale-gold)]">güven veren bir imza sunuyoruz</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#5f5a54]">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
             Merkezimize gelen herkesin kendini rahat, özel ve iyi hissetmesini
             önemsiyoruz. Bu nedenle sadece sonuç odaklı değil, deneyim odaklı bir
             bakım anlayışıyla çalışıyoruz.
@@ -35,10 +31,10 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="mt-16 mx-auto max-w-6xl">
-          <div className="rounded-[34px] border border-[#eadcc8] bg-white/75 p-6 shadow-[0_24px_80px_rgba(124,96,54,0.08)] backdrop-blur sm:p-8">
+          <div className="lale-card-dark rounded-[10px] p-6 sm:p-8">
             <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="relative overflow-hidden rounded-[28px]">
-                <div className="absolute left-5 top-5 z-10 inline-flex items-center gap-2 rounded-full bg-white/88 px-4 py-2 text-xs font-medium tracking-[0.14em] text-[#9f7740] backdrop-blur">
+              <div className="relative overflow-hidden rounded-[8px]">
+                <div className="absolute left-5 top-5 z-10 inline-flex items-center gap-2 rounded-full border border-[rgba(212,175,55,0.42)] bg-[rgba(6,35,31,0.74)] px-4 py-2 text-xs font-medium tracking-[0.14em] text-[var(--lale-gold)] backdrop-blur">
                   <FiStar className="h-4 w-4" />
                   PREMIUM DENEYİM
                 </div>
@@ -48,39 +44,39 @@ const WhyChooseUs = () => {
                   alt="Güzellik merkezi atmosferi"
                   width={900}
                   height={700}
-                  className="h-[380px] w-full object-cover object-[68%_center]"
+                  className="h-[380px] w-full object-cover object-[68%_center] grayscale"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1d1813]/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(6,35,31,0.45)] via-transparent to-transparent" />
               </div>
 
               <div>
-                <blockquote className="font-serif text-3xl leading-tight text-[#1a1a1a]">
+                <blockquote className="font-serif text-3xl leading-tight text-[var(--lale-ivory)]">
                   “Kendinizi iyi hissettiren bakım, aynaya baktığınızda da fark
                   edilir.”
                 </blockquote>
 
-                <p className="mt-5 text-sm leading-7 text-[#645e56]">
+                <p className="mt-5 text-sm leading-7 text-[rgba(251,250,246,0.68)]">
                   Hedefimiz sadece güzel görünmeniz değil; merkezin kapısından
                   girdiğiniz andan ayrıldığınız ana kadar kendinizi iyi
                   hissetmeniz.
                 </p>
 
                 <div className="mt-7 grid grid-cols-2 gap-4">
-                  <div className="rounded-2xl bg-[#faf3e8] p-4">
-                    <p className="text-xs tracking-[0.16em] text-[#a67a42]">
+                  <div className="rounded-[8px] border border-[rgba(212,175,55,0.16)] bg-[rgba(251,250,246,0.05)] p-4">
+                    <p className="text-xs tracking-[0.16em] text-[var(--lale-gold)]">
                       ODAK NOKTAMIZ
                     </p>
-                    <p className="mt-2 text-lg font-semibold text-[#242424]">
+                    <p className="mt-2 text-lg font-semibold text-[var(--lale-ivory)]">
                       Doğal ışıltı
                     </p>
                   </div>
 
-                  <div className="rounded-2xl bg-[#faf3e8] p-4">
-                    <p className="text-xs tracking-[0.16em] text-[#a67a42]">
+                  <div className="rounded-[8px] border border-[rgba(212,175,55,0.22)] bg-[rgba(212,175,55,0.08)] p-4">
+                    <p className="text-xs tracking-[0.16em] text-[var(--lale-gold)]">
                       DENEYİM
                     </p>
-                    <p className="mt-2 text-lg font-semibold text-[#242424]">
+                    <p className="mt-2 text-lg font-semibold text-[var(--lale-ivory)]">
                       Sakin ve özenli
                     </p>
                   </div>
@@ -89,7 +85,7 @@ const WhyChooseUs = () => {
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href="/hakkimizda"
-                    className="inline-flex items-center justify-center gap-3 rounded-full bg-[#b88b4c] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white transition-colors hover:bg-[#a4763c]"
+                    className="lale-gold-button gap-3"
                   >
                     Merkezimizi Keşfedin
                     <FiArrowRight className="h-4 w-4" />
@@ -97,7 +93,7 @@ const WhyChooseUs = () => {
 
                   <Link
                     href="/iletisim"
-                    className="inline-flex items-center justify-center rounded-full border border-[#d7b687] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-[#a4763c] transition-colors hover:bg-[#fbf3e7]"
+                    className="lale-outline-button"
                   >
                     Randevu Planlayın
                   </Link>

@@ -82,10 +82,10 @@ const ServiceAreaDetailPage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="lale-dark-section min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-amber-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Yükleniyor...</p>
+          <div className="w-12 h-12 border-4 border-[var(--lale-gold)] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-[rgba(251,250,246,0.72)]">Yükleniyor...</p>
         </div>
       </div>
     );
@@ -93,20 +93,19 @@ const ServiceAreaDetailPage = () => {
 
   if (!serviceArea) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="lale-dark-section min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="text-6xl mb-4">❌</div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Hizmet Bölgesi Bulunamadı</h1>
-          <p className="text-gray-600">Aradığınız hizmet bölgesi mevcut değil veya aktif değil.</p>
+          <h1 className="text-2xl font-bold text-[var(--lale-ivory)] mb-2">Hizmet Bölgesi Bulunamadı</h1>
+          <p className="text-[rgba(251,250,246,0.68)]">Aradığınız hizmet bölgesi mevcut değil veya aktif değil.</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative py-20 text-white">
+    <div className="page-flow min-h-screen bg-[var(--lale-emerald-deep)]">
+      <section className="lale-page-hero py-20 text-white">
         <div className="absolute inset-0">
           <Image
             src={serviceArea.imageUrl || '/img/sayfa1.jpg'}
@@ -119,25 +118,23 @@ const ServiceAreaDetailPage = () => {
           />
         </div>
         
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,35,31,0.70),rgba(6,35,31,0.82))]"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-amber-400">{serviceArea.name}</span>
+            <span className="text-[var(--lale-gold)]">{serviceArea.name}</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-[rgba(251,250,246,0.74)] max-w-2xl mx-auto">
             {serviceArea.description}
           </p>
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-16">
+      <section className="lale-dark-section py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="prose prose-lg max-w-none">
             <div 
-              className="text-gray-700 leading-relaxed"
+              className="text-[rgba(251,250,246,0.72)] leading-relaxed"
               dangerouslySetInnerHTML={{ __html: serviceArea.content }}
             />
           </div>
@@ -146,10 +143,10 @@ const ServiceAreaDetailPage = () => {
           {serviceArea.maps && serviceArea.maps.length > 0 && (
             <div className="mt-12">
               <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-[var(--lale-ivory)] mb-4">
                   {serviceArea.name} Bölgesi Konumu
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-[rgba(251,250,246,0.68)]">
                   Hizmet verdiğimiz bölgenin detaylı haritası
                 </p>
               </div>
@@ -162,7 +159,7 @@ const ServiceAreaDetailPage = () => {
                     : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
               }`}>
                 {serviceArea.maps?.map((map) => (
-                  <div key={map.id} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                  <div key={map.id} className="lale-card-dark rounded-xl shadow-lg overflow-hidden border">
                     <div className="p-4">
                       <div className="w-full h-64 rounded-lg overflow-hidden">
                         <iframe
@@ -186,15 +183,14 @@ const ServiceAreaDetailPage = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
       {galleryImages.length > 0 && (
-        <section className="py-16 bg-white">
+        <section className="lale-dark-section py-16">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--lale-ivory)] mb-4">
                 {serviceArea.name} Bölgesi Çalışmalarımızdan
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-[rgba(251,250,246,0.68)]">
                 Bu bölgede gerçekleştirdiğimiz projelerden örnekler
               </p>
             </div>
@@ -203,7 +199,7 @@ const ServiceAreaDetailPage = () => {
               {galleryImages.map((image) => (
                 <div
                   key={image.id}
-                  className="group cursor-pointer overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  className="group cursor-pointer overflow-hidden rounded-xl lale-card-dark hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                   onClick={() => setSelectedImage(image.url)}
                 >
                   <div className="relative h-64 overflow-hidden">
@@ -227,19 +223,18 @@ const ServiceAreaDetailPage = () => {
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-16 bg-amber-600">
+      <section className="lale-dark-section py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--lale-ivory)] mb-6">
             {serviceArea.name} Bölgesinde Hizmet mi Arıyorsunuz?
           </h2>
-          <p className="text-xl text-amber-100 mb-8">
+          <p className="text-xl text-[rgba(251,250,246,0.72)] mb-8">
             Hemen arayın, en kısa sürede yanınızdayız!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+905326991552"
-              className="bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center gap-2"
+              className="lale-gold-button gap-2"
             >
               📞 Hemen Ara
             </a>
@@ -247,7 +242,7 @@ const ServiceAreaDetailPage = () => {
               href="https://wa.me/905326991552/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors duration-300 flex items-center justify-center gap-2"
+              className="lale-outline-button gap-2"
             >
               💬 WhatsApp
             </a>

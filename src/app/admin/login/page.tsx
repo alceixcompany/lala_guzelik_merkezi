@@ -49,7 +49,7 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f1e8] flex items-center justify-center p-6 relative overflow-hidden">
+    <div className="admin-theme min-h-screen flex items-center justify-center overflow-hidden p-6 relative">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-[radial-gradient(circle_at_top_right,rgba(184,149,98,0.1),transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-[radial-gradient(circle_at_bottom_left,rgba(184,149,98,0.1),transparent_70%)] pointer-events-none" />
@@ -60,24 +60,24 @@ const AdminLogin = () => {
         transition={{ duration: 0.6 }}
         className="w-full max-w-md relative z-10"
       >
-        <div className="bg-white p-10 sm:p-14 rounded-[48px] border border-[#eadcc8] shadow-[0_40px_100px_rgba(124,96,54,0.08)]">
+        <div className="lale-card-dark rounded-[40px] p-10 sm:p-14 border border-[rgba(212,175,55,0.22)] shadow-[0_40px_100px_rgba(0,0,0,0.28)]">
           {/* Logo/Icon */}
           <div className="flex justify-center mb-10">
-            <div className="w-20 h-20 bg-[#fcf8f2] rounded-[28px] flex items-center justify-center text-[#b78a49] border border-[#eadcc8]">
+            <div className="w-20 h-20 rounded-[28px] flex items-center justify-center text-[var(--lale-gold)] border border-[rgba(212,175,55,0.22)] bg-[rgba(212,175,55,0.10)]">
               <FiLock className="w-8 h-8" />
             </div>
           </div>
 
           <div className="text-center mb-10">
-            <h1 className="font-serif text-3xl text-[#111111] mb-2">Yönetim Paneli</h1>
-            <p className="text-[#60584f] text-sm">Lütfen kimlik bilgilerinizi giriniz.</p>
+            <h1 className="font-serif text-3xl text-[var(--lale-ivory)] mb-2">Yönetim Paneli</h1>
+            <p className="text-[rgba(251,250,246,0.68)] text-sm">Lütfen kimlik bilgilerinizi giriniz.</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label className="text-xs tracking-[0.2em] text-[#343434] uppercase font-bold ml-2">E-posta</label>
+              <label className="text-xs tracking-[0.2em] text-[var(--lale-gold)] uppercase font-bold ml-2">E-posta</label>
               <div className="relative">
-                <div className="absolute left-6 top-1/2 -translate-y-1/2 text-[#b78a49]">
+                <div className="absolute left-6 top-1/2 -translate-y-1/2 text-[var(--lale-gold)]">
                   <FiMail className="w-5 h-5" />
                 </div>
                 <input
@@ -85,7 +85,7 @@ const AdminLogin = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-14 pr-6 py-4 bg-[#fcf8f2] border border-transparent rounded-full focus:outline-none focus:border-[#b78a49] transition-all text-[#111111] text-sm"
+                  className="w-full pl-14 pr-6 py-4 bg-[rgba(251,250,246,0.04)] border border-[rgba(212,175,55,0.18)] rounded-full focus:outline-none focus:border-[var(--lale-gold)] transition-all text-[var(--lale-ivory)] text-sm"
                   placeholder="admin@lalaguzellik.com"
                   disabled={isLoading}
                 />
@@ -93,9 +93,9 @@ const AdminLogin = () => {
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs tracking-[0.2em] text-[#343434] uppercase font-bold ml-2">Şifre</label>
+              <label className="text-xs tracking-[0.2em] text-[var(--lale-gold)] uppercase font-bold ml-2">Şifre</label>
               <div className="relative">
-                <div className="absolute left-6 top-1/2 -translate-y-1/2 text-[#b78a49]">
+                <div className="absolute left-6 top-1/2 -translate-y-1/2 text-[var(--lale-gold)]">
                   <FiLock className="w-5 h-5" />
                 </div>
                 <input
@@ -103,14 +103,14 @@ const AdminLogin = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-14 pr-14 py-4 bg-[#fcf8f2] border border-transparent rounded-full focus:outline-none focus:border-[#b78a49] transition-all text-[#111111] text-sm"
+                  className="w-full pl-14 pr-14 py-4 bg-[rgba(251,250,246,0.04)] border border-[rgba(212,175,55,0.18)] rounded-full focus:outline-none focus:border-[var(--lale-gold)] transition-all text-[var(--lale-ivory)] text-sm"
                   placeholder="••••••••"
                   disabled={isLoading}
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-6 top-1/2 -translate-y-1/2 text-[#60584f] hover:text-[#b78a49] transition-colors"
+                  className="absolute right-6 top-1/2 -translate-y-1/2 text-[rgba(251,250,246,0.56)] hover:text-[var(--lale-gold)] transition-colors"
                 >
                   {showPassword ? <FiEyeOff className="w-5 h-5" /> : <FiEye className="w-5 h-5" />}
                 </button>
@@ -130,7 +130,7 @@ const AdminLogin = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-[#111111] text-white py-5 rounded-full font-bold tracking-[0.15em] text-xs hover:bg-[#2d2d2d] transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-3 disabled:bg-gray-400"
+              className="w-full bg-[var(--lale-gold)] text-[var(--lale-emerald-deep)] py-5 rounded-full font-bold tracking-[0.15em] text-xs hover:bg-[var(--lale-gold-soft)] transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-3 disabled:bg-gray-400"
             >
               {isLoading ? (
                 <>
@@ -147,7 +147,7 @@ const AdminLogin = () => {
           </form>
         </div>
 
-        <p className="mt-10 text-center text-[10px] tracking-[0.2em] text-[#60584f] uppercase">
+        <p className="mt-10 text-center text-[10px] tracking-[0.2em] text-[rgba(251,250,246,0.56)] uppercase">
           Lalagüzeli Güzellik Merkezi &copy; {new Date().getFullYear()}
         </p>
       </motion.div>

@@ -164,37 +164,36 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
   }
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="relative py-32 text-white">
+    <div className="page-flow min-h-screen bg-[var(--lale-emerald-deep)]">
+      <section className="lale-page-hero py-32 text-white">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url("${service.heroImage}")`
           }}
         />
-        <div className="absolute inset-0 bg-black opacity-75"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,35,31,0.74),rgba(6,35,31,0.84))]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="text-4xl">{service.icon}</span>
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                <span className="text-amber-400">{service.title}</span>
+                <span className="text-[var(--lale-gold)]">{service.title}</span>
               </h1>
             </div>
-            <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl mb-8 text-[rgba(251,250,246,0.74)] max-w-3xl mx-auto leading-relaxed">
               {service.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#iletisim-formu"
-                className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 text-center"
+                className="lale-gold-button"
               >
                 📞 Randevu Planla
               </a>
               <a
                 href="tel:+905326991552"
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 text-center"
+                className="lale-outline-button"
               >
                 📱 Hemen Ara: 0532 699 15 52
               </a>
@@ -203,31 +202,30 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
         </div>
       </section>
 
-      {/* Service Overview */}
-      <section className="py-20 bg-white">
+      <section className="lale-dark-section py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--lale-ivory)] mb-6">
                 Hizmet Detayları
               </h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-[rgba(251,250,246,0.68)] mb-8 leading-relaxed">
                 {service.detailedInfo.overview}
               </p>
               
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-[var(--lale-ivory)] mb-4">
                   Neden Bizi Tercih Etmelisiniz?
                 </h3>
                 <ul className="space-y-3">
                   {service.detailedInfo.whyChoose.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <svg className="w-3 h-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="w-6 h-6 bg-[rgba(212,175,55,0.12)] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-[var(--lale-gold)]" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-[rgba(251,250,246,0.68)]">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -235,17 +233,17 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
             </div>
 
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-[var(--lale-ivory)]">
                 Hizmet Kapsamımız
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {service.features.map((feature, index) => (
-                  <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  <div key={index} className="bg-[rgba(251,250,246,0.06)] p-4 rounded-lg border border-[rgba(212,175,55,0.14)]">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center">
-                        <span className="text-white text-sm font-bold">{index + 1}</span>
+                      <div className="w-8 h-8 bg-[var(--lale-gold)] rounded-lg flex items-center justify-center">
+                        <span className="text-[var(--lale-emerald-deep)] text-sm font-bold">{index + 1}</span>
                       </div>
-                      <span className="text-gray-800 font-medium text-sm">{feature}</span>
+                      <span className="text-[var(--lale-ivory)] font-medium text-sm">{feature}</span>
                     </div>
                   </div>
                 ))}

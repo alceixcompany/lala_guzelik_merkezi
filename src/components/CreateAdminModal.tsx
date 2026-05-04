@@ -51,13 +51,13 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg shadow-xl w-full max-w-md">
-        <div className="flex items-center justify-between p-6 border-b">
-          <h3 className="text-lg font-semibold text-gray-900">Yeni Admin Oluştur</h3>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[rgba(6,35,31,0.82)] p-4 backdrop-blur-sm">
+      <div className="w-full max-w-md rounded-[24px] border border-[rgba(212,175,55,0.22)] bg-[rgba(6,35,31,0.94)] shadow-[0_30px_80px_rgba(0,0,0,0.34)]">
+        <div className="flex items-center justify-between border-b border-[rgba(212,175,55,0.18)] p-6">
+          <h3 className="text-lg font-semibold text-[var(--lale-ivory)]">Yeni Admin Oluştur</h3>
           <button
             onClick={handleClose}
-            className="text-gray-400 hover:text-gray-600"
+            className="text-[rgba(251,250,246,0.56)] hover:text-[var(--lale-gold)]"
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -67,7 +67,7 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
 
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
           <div>
-            <label htmlFor="displayName" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="displayName" className="block text-sm font-medium text-[rgba(251,250,246,0.72)] mb-2">
               Ad Soyad
             </label>
             <input
@@ -82,7 +82,7 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-[rgba(251,250,246,0.72)] mb-2">
               E-posta
             </label>
             <input
@@ -97,7 +97,7 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="password" className="block text-sm font-medium text-[rgba(251,250,246,0.72)] mb-2">
               Şifre
             </label>
             <div className="relative">
@@ -114,7 +114,7 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-2 text-gray-500 hover:text-gray-700"
+                className="absolute right-3 top-2 text-[rgba(251,250,246,0.56)] hover:text-[var(--lale-gold)]"
               >
                 {showPassword ? (
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,7 +131,7 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
           </div>
 
           <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="confirmPassword" className="block text-sm font-medium text-[rgba(251,250,246,0.72)] mb-2">
               Şifre Tekrar
             </label>
             <div className="relative">
@@ -148,7 +148,7 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
               <button
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="absolute right-3 top-2 text-gray-500 hover:text-gray-700"
+                className="absolute right-3 top-2 text-[rgba(251,250,246,0.56)] hover:text-[var(--lale-gold)]"
               >
                 {showConfirmPassword ? (
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,7 +180,7 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
             <button
               type="button"
               onClick={handleClose}
-              className="px-4 py-2 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+              className="px-4 py-2 text-[rgba(251,250,246,0.72)] bg-[rgba(251,250,246,0.08)] hover:bg-[rgba(251,250,246,0.12)] rounded-lg transition-colors"
             >
               İptal
             </button>
@@ -190,7 +190,7 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
               className={`px-4 py-2 text-white rounded-lg transition-colors ${
                 isLoading || password !== confirmPassword
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-amber-600 hover:bg-amber-700'
+                  : 'bg-[var(--lale-gold)] hover:bg-[var(--lale-gold-soft)] text-[var(--lale-emerald-deep)]'
               }`}
             >
               {isLoading ? 'Oluşturuluyor...' : 'Admin Oluştur'}
@@ -203,4 +203,3 @@ const CreateAdminModal: React.FC<CreateAdminModalProps> = ({ isOpen, onClose }) 
 };
 
 export default CreateAdminModal;
-

@@ -45,44 +45,38 @@ const Services = () => {
   return (
     <section
       id="hizmetler"
-      className="relative overflow-hidden bg-[#fcf8f3] py-24 sm:py-28"
+      className="lale-dark-section py-24 sm:py-28"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.95),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(191,151,96,0.12),transparent_30%)]" />
-      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c9a56f]/50 to-transparent" />
-
       <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[#dbc29d] bg-white/75 px-6 py-3 text-sm font-medium tracking-[0.18em] text-[#b18449] shadow-[0_12px_30px_rgba(191,151,96,0.08)] backdrop-blur">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
+          <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
             İMZA BAKIMLAR
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
           </div>
 
-          <h2 className="mt-8 font-serif text-4xl leading-tight text-[#171717] sm:text-5xl">
+          <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
             Güzelliğinizi ortaya çıkaran
-            <span className="block text-[#b88b4c]">özel bakım deneyimleri</span>
+            <span className="block text-[var(--lale-gold)]">prestijli bakım deneyimleri</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#5f5a54]">
-            Hero bölümündeki sakin, aydınlık ve premium hissi devam ettiren hizmet
-            seçimlerimizle her ziyaretinizi keyifli bir güzellik ritüeline
-            dönüştürüyoruz.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
+            Doğallık, zarafet ve güven hissini bir arada taşıyan uygulamalarla
+            her ziyareti seçkin bir güzellik ritüeline dönüştürüyoruz.
           </p>
         </div>
 
-        <div className="mt-16 rounded-[34px] border border-[#eadcc8] bg-white/70 p-8 shadow-[0_24px_80px_rgba(124,96,54,0.08)] backdrop-blur sm:p-10 lg:p-12">
+        <div className="lale-card-dark mt-16 rounded-[10px] p-8 sm:p-10 lg:p-12">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.24em] text-[#b18449]">
-              Guzellik Ritueli
+            <p className="text-sm font-medium uppercase tracking-[0.24em] text-[var(--lale-gold)]">
+              Güzellik Ritüeli
             </p>
-            <h3 className="mt-3 font-serif text-3xl text-[#1a1a1a] sm:text-4xl">
-              Ihtiyaciniza gore sekillenen profesyonel dokunuslar
+            <h3 className="mt-3 font-serif text-3xl text-[var(--lale-ivory)] sm:text-4xl">
+              İhtiyacınıza göre şekillenen profesyonel dokunuşlar
             </h3>
 
-            <p className="mt-6 text-base leading-8 text-[#5c5751] sm:text-lg">
-              Her bakim oncesinde cilt ve beklenti analizi yaparak sizi yormayan,
-              aksine tazeleyen bir seans plani kurguluyoruz. Sonuc kadar surecin
-              de konforlu olmasina odaklaniyoruz.
+            <p className="mt-6 text-base leading-8 text-[rgba(251,250,246,0.68)] sm:text-lg">
+              Her bakım öncesinde cilt ve beklenti analizi yaparak sizi yormayan,
+              aksine tazeleyen bir seans planı kurguluyoruz. Sonuç kadar sürecin
+              de konforlu olmasına odaklanıyoruz.
             </p>
           </div>
 
@@ -93,17 +87,17 @@ const Services = () => {
               return (
                 <article
                   key={service.title}
-                  className="group rounded-[28px] border border-[#efe4d5] bg-[#fffdfa] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#d4b183] hover:shadow-[0_24px_40px_rgba(184,139,76,0.12)]"
+                  className="group rounded-[8px] border border-[rgba(212,175,55,0.18)] bg-[rgba(251,250,246,0.05)] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(212,175,55,0.48)] hover:bg-[rgba(251,250,246,0.08)] hover:shadow-[0_24px_40px_rgba(0,0,0,0.22)]"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f6ecdf] text-[#b88b4c] shadow-inner">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(212,175,55,0.12)] text-[var(--lale-gold)] shadow-inner">
                     <Icon className="h-7 w-7" />
                   </div>
 
-                  <h4 className="mt-5 text-xl font-semibold text-[#1f1f1f]">
+                  <h4 className="mt-5 text-xl font-semibold text-[var(--lale-ivory)]">
                     {service.title}
                   </h4>
 
-                  <p className="mt-3 text-sm leading-7 text-[#645f58]">
+                  <p className="mt-3 text-sm leading-7 text-[rgba(251,250,246,0.68)]">
                     {service.description}
                   </p>
 
@@ -111,9 +105,9 @@ const Services = () => {
                     {service.highlights.map((highlight) => (
                       <div
                         key={highlight}
-                        className="flex items-center gap-2 text-sm text-[#6c675f]"
+                        className="flex items-center gap-2 text-sm text-[rgba(251,250,246,0.68)]"
                       >
-                        <FiCheck className="h-4 w-4 text-[#c49a5e]" />
+                        <FiCheck className="h-4 w-4 text-[var(--lale-gold)]" />
                         <span>{highlight}</span>
                       </div>
                     ))}
@@ -123,19 +117,19 @@ const Services = () => {
             })}
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t border-[#eadcc8] pt-10 sm:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t border-[rgba(13,77,63,0.14)] pt-10 sm:flex-row">
             <Link
               href="/iletisim"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#b88b4c] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white transition-colors hover:bg-[#a4763c]"
+              className="lale-gold-button gap-3"
             >
               Randevu Al
               <FiArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/hakkimizda"
-              className="inline-flex items-center justify-center rounded-full border border-[#d7b687] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-[#a4763c] transition-colors hover:bg-[#fbf3e7]"
+              className="lale-outline-button"
             >
-              Merkezimizi Taniyin
+              Merkezimizi Tanıyın
             </Link>
           </div>
         </div>

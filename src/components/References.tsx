@@ -123,84 +123,80 @@ const References = () => {
   return (
     <section
       id="referanslar"
-      className="relative overflow-hidden bg-[#f8f2e9] py-24 sm:py-28"
+      className="lale-dark-section py-24 sm:py-28"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.92),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(191,151,96,0.12),transparent_28%)]" />
-
       <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[#dbc29d] bg-white/80 px-6 py-3 text-sm font-medium tracking-[0.18em] text-[#b18449] shadow-[0_12px_30px_rgba(191,151,96,0.08)] backdrop-blur">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
-            MUSTERI DENEYIMLERI
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
+          <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
+            MÜŞTERİ DENEYİMLERİ
           </div>
 
-          <h2 className="mt-8 font-serif text-4xl leading-tight text-[#171717] sm:text-5xl">
-            Misafirlerimizin paylastigi
-            <span className="block text-[#b88b4c]">gercek deneyimler</span>
+          <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
+            Misafirlerimizin paylaştığı
+            <span className="block text-[var(--lale-gold)]">gerçek deneyimler</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#60584f]">
-            Google yorumu hissi veren, samimi ve dogal geri bildirimleri sitenin
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
+            Google yorumu hissi veren, samimi ve doğal geri bildirimleri sitenin
             sakin premium diliyle bir araya getirdik.
           </p>
         </div>
 
-        <div className="mt-16 rounded-[34px] border border-[#eadcc8] bg-white/75 p-6 shadow-[0_24px_80px_rgba(124,96,54,0.08)] backdrop-blur sm:p-8 lg:p-10">
+        <div className="lale-card-dark mt-16 rounded-[10px] p-6 sm:p-8 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
-            <div className="rounded-[30px] border border-[#ece0d0] bg-[linear-gradient(180deg,#fffdfa,#f8efe2)] p-6 sm:p-7">
+            <div className="rounded-[10px] border border-[rgba(212,175,55,0.18)] bg-[rgba(251,250,246,0.05)] p-6 sm:p-7">
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/90 shadow-sm">
                   <span className="text-xl font-bold text-[#4285F4]">G</span>
                 </div>
                 <div>
-                  <p className="text-sm tracking-[0.14em] text-[#9d7742]">
+                  <p className="text-sm tracking-[0.14em] text-[var(--lale-gold)]">
                     GOOGLE YORUMLARI
                   </p>
-                  <h3 className="mt-1 text-2xl font-semibold text-[#1f1f1f]">
+                  <h3 className="mt-1 text-2xl font-semibold text-[var(--lale-ivory)]">
                     4.9 / 5.0
                   </h3>
                 </div>
               </div>
 
-              <div className="mt-5 flex items-center gap-1 text-[#e1ab4d]">
+              <div className="mt-5 flex items-center gap-1 text-[var(--lale-gold)]">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <FiStar key={index} className="h-5 w-5 fill-current" />
                 ))}
               </div>
 
-              <p className="mt-5 text-sm leading-7 text-[#645d55]">
-                Misafirlerimizin yorumlarinda en cok; guleryuzlu yaklasim,
-                hijyen, dogal sonuc ve rahat hissettiren atmosfer one cikiyor.
+              <p className="mt-5 text-sm leading-7 text-[rgba(251,250,246,0.68)]">
+                Misafirlerimizin yorumlarında en çok; güler yüzlü yaklaşım,
+                hijyen, doğal sonuç ve rahat hissettiren atmosfer öne çıkıyor.
               </p>
 
               <div className="mt-6 space-y-3">
-                <div className="flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3">
-                  <FiCheckCircle className="h-5 w-5 text-[#b88b4c]" />
-                  <span className="text-sm text-[#4f4a44]">Dogal ve zarif sonuc odakli</span>
+                <div className="flex items-center gap-3 rounded-[8px] border border-[rgba(212,175,55,0.12)] bg-[rgba(251,250,246,0.06)] px-4 py-3">
+                  <FiCheckCircle className="h-5 w-5 text-[var(--lale-gold)]" />
+                  <span className="text-sm text-[rgba(251,250,246,0.74)]">Doğal ve zarif sonuç odaklı</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3">
-                  <FiCheckCircle className="h-5 w-5 text-[#b88b4c]" />
-                  <span className="text-sm text-[#4f4a44]">Temiz ve huzurlu merkez deneyimi</span>
+                <div className="flex items-center gap-3 rounded-[8px] border border-[rgba(212,175,55,0.12)] bg-[rgba(251,250,246,0.06)] px-4 py-3">
+                  <FiCheckCircle className="h-5 w-5 text-[var(--lale-gold)]" />
+                  <span className="text-sm text-[rgba(251,250,246,0.74)]">Temiz ve huzurlu merkez deneyimi</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3">
-                  <FiCheckCircle className="h-5 w-5 text-[#b88b4c]" />
-                  <span className="text-sm text-[#4f4a44]">Duzenli takip ve ilgili ekip</span>
+                <div className="flex items-center gap-3 rounded-[8px] border border-[rgba(212,175,55,0.12)] bg-[rgba(251,250,246,0.06)] px-4 py-3">
+                  <FiCheckCircle className="h-5 w-5 text-[var(--lale-gold)]" />
+                  <span className="text-sm text-[rgba(251,250,246,0.74)]">Düzenli takip ve ilgili ekip</span>
                 </div>
               </div>
 
-              <div className="mt-7 rounded-2xl border border-[#ead7bc] bg-white/70 p-4">
+              <div className="mt-7 rounded-[8px] border border-[rgba(212,175,55,0.22)] bg-[rgba(212,175,55,0.08)] p-4">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-xs tracking-[0.14em] text-[#a17a45]">
-                      GORUNTULEME
+                    <p className="text-xs tracking-[0.14em] text-[var(--lale-gold)]">
+                      GÖRÜNTÜLEME
                     </p>
-                    <p className="mt-1 text-sm text-[#5e564d]">
-                      Google benzeri yorum ozeti
+                    <p className="mt-1 text-sm text-[rgba(251,250,246,0.68)]">
+                      Google benzeri yorum özeti
                     </p>
                   </div>
-                  <div className="inline-flex items-center gap-2 text-sm font-medium text-[#a4763c]">
-                    Incele
+                  <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--lale-gold)]">
+                    İncele
                     <FiExternalLink className="h-4 w-4" />
                   </div>
                 </div>
@@ -211,7 +207,7 @@ const References = () => {
               {reviews.map((review) => (
                 <article
                   key={`${review.name}-${review.service}`}
-                  className="rounded-[28px] border border-[#ece0d0] bg-[#fffdfa] p-6 shadow-[0_18px_40px_rgba(124,96,54,0.06)]"
+                  className="rounded-[10px] border border-[rgba(212,175,55,0.18)] bg-[rgba(251,250,246,0.05)] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.16)]"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex items-center gap-3">
@@ -220,36 +216,36 @@ const References = () => {
                         alt={review.name}
                         width={52}
                         height={52}
-                        className="h-13 w-13 rounded-full object-cover"
+                        className="h-[52px] w-[52px] rounded-full object-cover grayscale"
                       />
                       <div>
-                        <h4 className="text-base font-semibold text-[#1f1f1f]">
+                        <h4 className="text-base font-semibold text-[var(--lale-ivory)]">
                           {review.name}
                         </h4>
-                        <div className="mt-1 flex items-center gap-2 text-xs text-[#7a736a]">
+                        <div className="mt-1 flex items-center gap-2 text-xs text-[rgba(251,250,246,0.52)]">
                           <FiMapPin className="h-3.5 w-3.5" />
                           <span>{review.location}</span>
                         </div>
                       </div>
                     </div>
-                    <div className="text-xs text-[#8b8378]">{review.time}</div>
+                    <div className="text-xs text-[rgba(251,250,246,0.52)]">{review.time}</div>
                   </div>
 
-                  <div className="mt-4 flex items-center gap-1 text-[#e1ab4d]">
+                  <div className="mt-4 flex items-center gap-1 text-[var(--lale-gold)]">
                     {Array.from({ length: review.rating }).map((_, index) => (
                       <FiStar key={index} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
 
-                  <p className="mt-4 text-sm leading-7 text-[#625c54]">
+                  <p className="mt-4 text-sm leading-7 text-[rgba(251,250,246,0.68)]">
                     {review.comment}
                   </p>
 
-                  <div className="mt-5 flex items-center justify-between border-t border-[#f0e7da] pt-4">
-                    <span className="rounded-full bg-[#f8efe2] px-3 py-1 text-xs text-[#a4763c]">
+                  <div className="mt-5 flex items-center justify-between border-t border-[rgba(212,175,55,0.12)] pt-4">
+                    <span className="rounded-full border border-[rgba(212,175,55,0.18)] bg-[rgba(212,175,55,0.08)] px-3 py-1 text-xs text-[var(--lale-gold)]">
                       {review.service}
                     </span>
-                    <span className="text-xs text-[#91887d]">Google uzerinden yorum</span>
+                    <span className="text-xs text-[rgba(251,250,246,0.52)]">Google üzerinden yorum</span>
                   </div>
                 </article>
               ))}
@@ -258,31 +254,31 @@ const References = () => {
 
           <div
             ref={statsRef}
-            className="mt-10 grid gap-4 border-t border-[#eadcc8] pt-8 sm:grid-cols-2 lg:grid-cols-4"
+            className="mt-10 grid gap-4 border-t border-[rgba(212,175,55,0.14)] pt-8 sm:grid-cols-2 lg:grid-cols-4"
           >
-            <div className="rounded-2xl bg-[#faf3e8] p-5 text-center">
-              <div className="text-3xl font-semibold text-[#b88b4c]">
+            <div className="rounded-[8px] border border-[rgba(212,175,55,0.14)] bg-[rgba(251,250,246,0.05)] p-5 text-center">
+              <div className="text-3xl font-semibold text-[var(--lale-gold)]">
                 {counts.reviews}+
               </div>
-              <p className="mt-2 text-sm text-[#666057]">Yorum ve degerlendirme</p>
+              <p className="mt-2 text-sm text-[rgba(251,250,246,0.68)]">Yorum ve değerlendirme</p>
             </div>
-            <div className="rounded-2xl bg-[#faf3e8] p-5 text-center">
-              <div className="text-3xl font-semibold text-[#b88b4c]">
+            <div className="rounded-[8px] border border-[rgba(212,175,55,0.14)] bg-[rgba(251,250,246,0.05)] p-5 text-center">
+              <div className="text-3xl font-semibold text-[var(--lale-gold)]">
                 {counts.customers}+
               </div>
-              <p className="mt-2 text-sm text-[#666057]">Mutlu misafir</p>
+              <p className="mt-2 text-sm text-[rgba(251,250,246,0.68)]">Mutlu misafir</p>
             </div>
-            <div className="rounded-2xl bg-[#faf3e8] p-5 text-center">
-              <div className="text-3xl font-semibold text-[#b88b4c]">
+            <div className="rounded-[8px] border border-[rgba(212,175,55,0.14)] bg-[rgba(251,250,246,0.05)] p-5 text-center">
+              <div className="text-3xl font-semibold text-[var(--lale-gold)]">
                 {counts.years}+
               </div>
-              <p className="mt-2 text-sm text-[#666057]">Yillik deneyim</p>
+              <p className="mt-2 text-sm text-[rgba(251,250,246,0.68)]">Yıllık deneyim</p>
             </div>
-            <div className="rounded-2xl bg-[#faf3e8] p-5 text-center">
-              <div className="text-3xl font-semibold text-[#b88b4c]">
+            <div className="rounded-[8px] border border-[rgba(212,175,55,0.14)] bg-[rgba(251,250,246,0.05)] p-5 text-center">
+              <div className="text-3xl font-semibold text-[var(--lale-gold)]">
                 %{counts.satisfaction}
               </div>
-              <p className="mt-2 text-sm text-[#666057]">Memnuniyet orani</p>
+              <p className="mt-2 text-sm text-[rgba(251,250,246,0.68)]">Memnuniyet oranı</p>
             </div>
           </div>
         </div>

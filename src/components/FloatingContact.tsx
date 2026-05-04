@@ -25,7 +25,7 @@ const FloatingContact = () => {
         </svg>
       ),
       href: 'https://wa.me/905326991552',
-      color: 'bg-green-500',
+      color: 'bg-[var(--lale-emerald)] border border-[rgba(212,175,55,0.42)]',
       angle: 220 // Sol üst (çeyrek daire)
     },
     {
@@ -36,7 +36,7 @@ const FloatingContact = () => {
         </svg>
       ),
       href: 'tel:+905326991552',
-      color: 'bg-blue-500',
+      color: 'bg-[var(--lale-emerald)] border border-[rgba(212,175,55,0.42)]',
       angle: 260 // Sol üst (çeyrek daire)
     },
     {
@@ -47,7 +47,7 @@ const FloatingContact = () => {
         </svg>
       ),
       href: 'https://www.instagram.com/',
-      color: 'bg-pink-500',
+      color: 'bg-[var(--lale-emerald)] border border-[rgba(212,175,55,0.42)]',
       angle: 180 // Sol (çeyrek daire)
     }
   ];
@@ -101,7 +101,7 @@ const FloatingContact = () => {
       {/* Main Toggle Button */}
       <button
         onClick={toggleMenu}
-        className={`bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer relative z-30`}
+        className="relative z-30 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-[var(--lale-gold)] text-[var(--lale-emerald-deep)] shadow-2xl shadow-[rgba(212,175,55,0.28)] transition-all duration-300 hover:scale-110 hover:bg-[var(--lale-gold-soft)] active:scale-95"
         title="İletişim"
         type="button"
       >

@@ -4,6 +4,7 @@ import { db } from '@/lib/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FiArrowRight } from 'react-icons/fi';
 
 interface GalleryCategory {
   id: string;
@@ -74,11 +75,11 @@ const Gallery = () => {
 
   if (loading) {
     return (
-      <section className="py-20 bg-white">
+      <section className="lale-dark-section py-20">
         <div className="max-w-6xl mx-auto px-4 pt-[10px]">
           <div className="text-center">
-            <div className="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-gray-600">Galeri yükleniyor...</p>
+            <div className="w-12 h-12 border-4 border-[var(--lale-gold)] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-[rgba(251,250,246,0.72)]">Galeri yükleniyor...</p>
           </div>
         </div>
       </section>
@@ -90,81 +91,66 @@ const Gallery = () => {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#f8f2e9] py-24 sm:py-28">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.8),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(191,151,96,0.1),transparent_30%)]" />
-      
+    <section className="lale-dark-section py-24 sm:py-28">
       <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
-        {/* Header */}
         <div className="mx-auto max-w-3xl text-center mb-16 pt-[10px]">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[#dbc29d] bg-white/80 px-6 py-3 text-sm font-medium tracking-[0.18em] text-[#b18449] shadow-[0_12px_30px_rgba(191,151,96,0.08)] backdrop-blur mb-8">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
+          <div className="lale-kicker mb-8 bg-[rgba(6,35,31,0.56)]">
             ÇALIŞMA ÖRNEKLERİMİZ
-            <span className="h-2.5 w-2.5 rounded-full bg-[#d8ae6c]" />
           </div>
 
-          <h2 className="font-serif text-4xl leading-tight text-[#171717] sm:text-5xl">
+          <h2 className="font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
             Güzelliğinize ilham veren
-            <span className="block text-[#b88b4c]">gerçek dönüşümler</span>
+            <span className="block text-[var(--lale-gold)]">gerçek dönüşümler</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#60584f]">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
             Merkezimizde uyguladığımız özel bakım süreçlerinden seçilmiş en özel kareler.
           </p>
         </div>
 
-        {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {galleryItems.map((item) => (
             <div
               key={item.id}
-              className="group relative bg-white rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(124,96,54,0.08)] hover:shadow-[0_30px_70px_rgba(124,96,54,0.15)] transition-all duration-700 transform hover:-translate-y-2 border border-[#eadcc8]/30"
+              className="group lale-card-dark relative overflow-hidden rounded-[10px] transition-all duration-700 hover:-translate-y-2 hover:border-[rgba(212,175,55,0.4)] hover:shadow-[0_30px_70px_rgba(0,0,0,0.28)]"
             >
-              {/* Image Container */}
               <div className="relative h-[340px] overflow-hidden">
                 {item.imageUrl ? (
                   <Image
                     src={item.imageUrl}
                     alt={item.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                    className="object-cover grayscale transition-transform duration-1000 ease-out group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 ) : (
-                  <div className="w-full h-full bg-[#fdfaf5] flex items-center justify-center">
-                    <span className="text-6xl opacity-20">📷</span>
+                  <div className="w-full h-full bg-[var(--lale-emerald-deep)] flex items-center justify-center">
+                    <span className="text-6xl text-[var(--lale-gold)] opacity-60">✦</span>
                   </div>
                 )}
-                
-                {/* Overlays */}
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                
-                {/* Hover Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-6 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
-                   <Link 
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,35,31,0.08),rgba(6,35,31,0.68))]" />
+                <div className="absolute left-6 top-6 rounded-full border border-[rgba(212,175,55,0.34)] bg-[rgba(6,35,31,0.68)] px-4 py-2 text-xs font-medium tracking-[0.14em] text-[var(--lale-gold)] backdrop-blur">
+                  {getCategoryName(item.categoryId)}
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <Link 
                     href="/galeri"
-                    className="inline-flex items-center text-white font-medium text-sm group/link"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--lale-gold)] transition-colors hover:text-[var(--lale-gold-soft)]"
                   >
                     Detayları Görüntüle
-                    <div className="ml-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover/link:bg-white group-hover/link:text-[#b18449] transition-all duration-300">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7-7 7" />
-                      </svg>
-                    </div>
+                    <FiArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
               </div>
 
-              {/* Content Below Image */}
               <div className="p-8">
-                <h3 className="font-serif text-2xl text-[#171717] mb-3 group-hover:text-[#b18449] transition-colors duration-300">
+                <h3 className="mb-3 font-serif text-2xl text-[var(--lale-ivory)] transition-colors duration-300 group-hover:text-[var(--lale-gold)]">
                   {item.title}
                 </h3>
                 
                 {item.description && (
                   <div 
-                    className="text-[#60584f] text-sm leading-relaxed line-clamp-2"
+                    className="text-sm leading-7 text-[rgba(251,250,246,0.66)] line-clamp-2"
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   />
                 )}
@@ -173,18 +159,13 @@ const Gallery = () => {
           ))}
         </div>
 
-        {/* View All Button */}
         <div className="text-center mt-20">
           <Link 
             href="/galeri"
-            className="inline-flex items-center group relative"
+            className="lale-outline-button gap-3"
           >
-            <div className="relative z-10 bg-[#b18449] hover:bg-[#a4763c] text-white px-12 py-5 rounded-full font-bold tracking-[0.1em] text-sm transition-all duration-300 shadow-xl shadow-[#b18449]/20 flex items-center gap-4">
-              TÜM GALERİYİ KEŞFEDİN
-              <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </div>
+            Tüm Galeriyi Keşfedin
+            <FiArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

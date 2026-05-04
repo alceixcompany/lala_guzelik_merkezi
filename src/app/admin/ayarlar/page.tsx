@@ -49,18 +49,18 @@ const AdminSettings = () => {
     <div className="p-6 lg:p-8">
       {/* Page Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Şifre Değiştir</h1>
-        <p className="text-gray-600">Hesap güvenliğiniz için şifrenizi güncelleyin</p>
+        <h1 className="text-2xl font-bold text-[var(--lale-ivory)] mb-2">Şifre Değiştir</h1>
+        <p className="text-[rgba(251,250,246,0.68)]">Hesap güvenliğiniz için şifrenizi güncelleyin</p>
       </div>
 
       {/* Statik Admin Uyarısı */}
       {user?.isStaticAdmin && (
-        <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+        <div className="mb-6 rounded-2xl border border-[rgba(212,175,55,0.22)] bg-[rgba(212,175,55,0.10)] p-4">
           <div className="flex items-center">
-            <svg className="h-5 w-5 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-5 w-5 text-[var(--lale-gold)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z" />
             </svg>
-            <div className="text-sm text-yellow-800">
+            <div className="text-sm text-[rgba(251,250,246,0.74)]">
               <p className="font-medium">Statik Admin Hesabı</p>
               <p>Statik admin hesabı için şifre değiştirme desteklenmemektedir. Güvenlik için lütfen yeni bir veritabanı admin hesabı oluşturun.</p>
             </div>
@@ -73,7 +73,7 @@ const AdminSettings = () => {
         <div className="mb-6 max-w-md">
           {/* Error Message */}
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-md text-sm animate-pulse mb-3">
+            <div className="bg-[rgba(239,68,68,0.10)] border border-[rgba(239,68,68,0.22)] text-red-200 px-4 py-3 rounded-md text-sm animate-pulse mb-3">
               <div className="flex items-center">
                 <svg className="h-5 w-5 text-red-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -85,7 +85,7 @@ const AdminSettings = () => {
 
           {/* Success Message */}
           {successMessage && (
-            <div className="bg-green-50 border border-green-200 text-green-600 px-4 py-3 rounded-md text-sm animate-bounce">
+            <div className="bg-[rgba(34,197,94,0.12)] border border-[rgba(34,197,94,0.22)] text-green-200 px-4 py-3 rounded-md text-sm animate-bounce">
               <div className="flex items-center">
                 <svg className="h-5 w-5 text-green-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -99,11 +99,11 @@ const AdminSettings = () => {
 
       {/* Password Change Form */}
       <div className="max-w-md">
-        <div className="bg-white rounded-lg shadow-sm border p-6">
+        <div className="lale-card-dark rounded-[24px] p-6">
           <form onSubmit={handlePasswordChange} className="space-y-6">
             {user?.isStaticAdmin && (
-              <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg text-center">
-                <p className="text-gray-600 text-sm">
+              <div className="p-4 bg-[rgba(251,250,246,0.06)] border border-[rgba(212,175,55,0.18)] rounded-lg text-center">
+                <p className="text-[rgba(251,250,246,0.68)] text-sm">
                   Statik admin hesabı için şifre değiştirme özelliği devre dışıdır.
                 </p>
               </div>
@@ -128,7 +128,7 @@ const AdminSettings = () => {
             {!user?.isStaticAdmin && (
               <>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-[rgba(251,250,246,0.72)] mb-2">
                     Yeni Şifre
                   </label>
                   <input
@@ -140,11 +140,11 @@ const AdminSettings = () => {
                     placeholder="Yeni şifrenizi girin"
                     disabled={isLoading}
                   />
-                  <p className="text-xs text-gray-500 mt-1">En az 6 karakter olmalıdır</p>
+                  <p className="text-xs text-[rgba(251,250,246,0.50)] mt-1">En az 6 karakter olmalıdır</p>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-[rgba(251,250,246,0.72)] mb-2">
                     Yeni Şifre Tekrar
                   </label>
                   <input
@@ -186,9 +186,9 @@ const AdminSettings = () => {
         </div>
 
         {/* Security Tips */}
-        <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <h3 className="text-sm font-medium text-blue-900 mb-2">Güvenlik İpuçları</h3>
-          <ul className="text-xs text-blue-700 space-y-1">
+        <div className="mt-6 rounded-2xl border border-[rgba(212,175,55,0.18)] bg-[rgba(251,250,246,0.06)] p-4">
+          <h3 className="text-sm font-medium text-[var(--lale-gold)] mb-2">Güvenlik İpuçları</h3>
+          <ul className="text-xs text-[rgba(251,250,246,0.68)] space-y-1">
             <li>• Güçlü bir şifre için büyük/küçük harf, rakam ve özel karakter kullanın</li>
             <li>• Şifrenizi kimseyle paylaşmayın</li>
             <li>• Düzenli olarak şifrenizi değiştirin</li>

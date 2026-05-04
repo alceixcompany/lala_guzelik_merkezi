@@ -43,24 +43,22 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fcf6ee] py-24 sm:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.92),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(191,151,96,0.10),transparent_28%)]" />
-
+    <section className="lale-dark-section py-24 sm:py-28">
       <div className="relative mx-auto max-w-5xl px-5 sm:px-7 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[#dbc29d] bg-white/80 px-6 py-3 text-sm font-medium tracking-[0.18em] text-[#b18449] shadow-[0_12px_30px_rgba(191,151,96,0.08)] backdrop-blur">
+          <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
             <FiHelpCircle className="h-4 w-4" />
             SIK SORULAN SORULAR
           </div>
 
-          <h2 className="mt-8 font-serif text-4xl leading-tight text-[#171717] sm:text-5xl">
-            Akliniza takilan sorular icin
-            <span className="block text-[#b88b4c]">kisa ve net yanitlar</span>
+          <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
+            Aklınıza takılan sorular için
+            <span className="block text-[var(--lale-gold)]">kısa ve net yanıtlar</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#5f5a54]">
-            Randevu sureci, uygulamalar ve merkez deneyimiyle ilgili en cok
-            merak edilen konulari sizin icin bir araya getirdik.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
+            Randevu süreci, uygulamalar ve merkez deneyimiyle ilgili en çok
+            merak edilen konuları sizin için bir araya getirdik.
           </p>
         </div>
 
@@ -71,22 +69,22 @@ const FAQ = () => {
             return (
               <div
                 key={faq.question}
-                className={`overflow-hidden rounded-[28px] border bg-white/80 shadow-[0_18px_40px_rgba(124,96,54,0.05)] transition-all duration-300 ${
-                  isActive ? 'border-[#dcb889]' : 'border-[#ece0d0]'
+                className={`overflow-hidden rounded-[10px] border bg-[rgba(6,35,31,0.72)] shadow-[0_18px_40px_rgba(0,0,0,0.22)] transition-all duration-300 ${
+                  isActive ? 'border-[rgba(212,175,55,0.48)]' : 'border-[rgba(212,175,55,0.18)]'
                 }`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-7"
-              >
-                  <h3 className="text-base font-medium leading-7 text-[#1f1f1f] sm:text-lg">
+                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-7"
+                >
+                  <h3 className="text-base font-medium leading-7 text-[var(--lale-ivory)] sm:text-lg">
                     {faq.question}
                   </h3>
                   <div
                     className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
                       isActive
-                        ? 'border-[#dcb889] bg-[#f8efe2] text-[#b88b4c]'
-                        : 'border-[#ece0d0] bg-white text-[#8b8378]'
+                        ? 'border-[var(--lale-gold)] bg-[rgba(212,175,55,0.12)] text-[var(--lale-gold)]'
+                        : 'border-[rgba(212,175,55,0.18)] bg-[rgba(251,250,246,0.06)] text-[rgba(251,250,246,0.58)]'
                     }`}
                   >
                     <FiChevronDown
@@ -103,8 +101,8 @@ const FAQ = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="border-t border-[#f1e7da] px-5 pb-5 pt-4 sm:px-7">
-                      <p className="max-w-4xl text-sm leading-7 text-[#645d56]">
+                    <div className="border-t border-[rgba(212,175,55,0.12)] px-5 pb-5 pt-4 sm:px-7">
+                      <p className="max-w-4xl text-sm leading-7 text-[rgba(251,250,246,0.68)]">
                         {faq.answer}
                       </p>
                     </div>

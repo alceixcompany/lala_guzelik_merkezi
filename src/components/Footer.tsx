@@ -14,11 +14,9 @@ const Footer = () => {
   }
 
   return (
-    <footer className="relative overflow-hidden bg-[#f4ecdf] text-[#2a2622]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.9),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(191,151,96,0.10),transparent_28%)]" />
-
+    <footer className="lale-dark-section lale-footer text-[var(--lale-ivory)]">
       <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
-        <div className="border-t border-[#e1cfb6]/80 py-16">
+        <div className="border-t border-[rgba(212,175,55,0.28)] py-16">
           <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr_0.85fr_1fr]">
             <div>
               <Image
@@ -28,7 +26,7 @@ const Footer = () => {
                 height={76}
                 className="h-12 w-auto"
               />
-              <p className="mt-6 max-w-sm text-sm leading-7 text-[#625b54]">
+              <p className="mt-6 max-w-sm text-sm leading-7 text-[rgba(251,250,246,0.70)]">
                 Kendinizi özel hissedeceğiniz, sakin ve özenli bir güzellik
                 deneyimi sunuyoruz. Cilt bakımı, lazer epilasyon, kaş-kirpik ve
                 vücut bakımlarında yanınızdayız.
@@ -39,21 +37,21 @@ const Footer = () => {
                   href="https://www.instagram.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#dbc29d] bg-white/70 text-[#a4763c] transition-colors hover:bg-[#f8efe2]"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(212,175,55,0.38)] bg-[rgba(255,255,255,0.06)] text-[var(--lale-gold)] transition-colors hover:bg-[rgba(212,175,55,0.12)]"
                   title="Instagram"
                 >
                   <FiInstagram className="h-4 w-4" />
                 </a>
                 <a
                   href="tel:+905326991552"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#dbc29d] bg-white/70 text-[#a4763c] transition-colors hover:bg-[#f8efe2]"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(212,175,55,0.38)] bg-[rgba(255,255,255,0.06)] text-[var(--lale-gold)] transition-colors hover:bg-[rgba(212,175,55,0.12)]"
                   title="Telefon"
                 >
                   <FiPhone className="h-4 w-4" />
                 </a>
                 <a
                   href="mailto:info@lalaguzellik.com"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#dbc29d] bg-white/70 text-[#a4763c] transition-colors hover:bg-[#f8efe2]"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(212,175,55,0.38)] bg-[rgba(255,255,255,0.06)] text-[var(--lale-gold)] transition-colors hover:bg-[rgba(212,175,55,0.12)]"
                   title="E-posta"
                 >
                   <FiMail className="h-4 w-4" />
@@ -62,30 +60,30 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-serif text-2xl text-[#1f1f1f]">Sayfalar</h3>
-              <ul className="mt-5 space-y-3 text-sm text-[#625b54]">
+              <h3 className="font-serif text-2xl text-[var(--lale-gold)]">Sayfalar</h3>
+              <ul className="mt-5 space-y-3 text-sm text-[rgba(251,250,246,0.70)]">
                 <li>
-                  <Link href="/" className="transition-colors hover:text-[#a4763c]">
+                  <Link href="/" className="transition-colors hover:text-[var(--lale-gold)]">
                     Ana Sayfa
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hakkimizda" className="transition-colors hover:text-[#a4763c]">
+                  <Link href="/hakkimizda" className="transition-colors hover:text-[var(--lale-gold)]">
                     Hakkımızda
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hizmetlerimiz" className="transition-colors hover:text-[#a4763c]">
+                  <Link href="/hizmetlerimiz" className="transition-colors hover:text-[var(--lale-gold)]">
                     Hizmetlerimiz
                   </Link>
                 </li>
                 <li>
-                  <Link href="/galeri" className="transition-colors hover:text-[#a4763c]">
+                  <Link href="/galeri" className="transition-colors hover:text-[var(--lale-gold)]">
                     Galeri
                   </Link>
                 </li>
                 <li>
-                  <Link href="/iletisim" className="transition-colors hover:text-[#a4763c]">
+                  <Link href="/iletisim" className="transition-colors hover:text-[var(--lale-gold)]">
                     İletişim
                   </Link>
                 </li>
@@ -93,8 +91,8 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-serif text-2xl text-[#1f1f1f]">Bakımlar</h3>
-              <ul className="mt-5 space-y-3 text-sm text-[#625b54]">
+              <h3 className="font-serif text-2xl text-[var(--lale-gold)]">Bakımlar</h3>
+              <ul className="mt-5 space-y-3 text-sm text-[rgba(251,250,246,0.70)]">
                 <li>Cilt Bakımı</li>
                 <li>Lazer Epilasyon</li>
                 <li>Kaş ve Kirpik</li>
@@ -104,21 +102,21 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-serif text-2xl text-[#1f1f1f]">İletişim</h3>
-              <ul className="mt-5 space-y-4 text-sm text-[#625b54]">
+              <h3 className="font-serif text-2xl text-[var(--lale-gold)]">İletişim</h3>
+              <ul className="mt-5 space-y-4 text-sm text-[rgba(251,250,246,0.70)]">
                 <li className="flex items-start gap-3">
-                  <FiMapPin className="mt-1 h-4 w-4 text-[#a4763c]" />
+                  <FiMapPin className="mt-1 h-4 w-4 text-[var(--lale-gold)]" />
                   <span>Bulgurlu, Söğütlü Çayır Cd. No:25 Üsküdar / İstanbul</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiPhone className="h-4 w-4 text-[#a4763c]" />
-                  <a href="tel:+905326991552" className="transition-colors hover:text-[#a4763c]">
+                  <FiPhone className="h-4 w-4 text-[var(--lale-gold)]" />
+                  <a href="tel:+905326991552" className="transition-colors hover:text-[var(--lale-gold)]">
                     +90 532 699 15 52
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiMail className="h-4 w-4 text-[#a4763c]" />
-                  <a href="mailto:info@lalaguzellik.com" className="transition-colors hover:text-[#a4763c]">
+                  <FiMail className="h-4 w-4 text-[var(--lale-gold)]" />
+                  <a href="mailto:info@lalaguzellik.com" className="transition-colors hover:text-[var(--lale-gold)]">
                     info@lalaguzellik.com
                   </a>
                 </li>
@@ -127,10 +125,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-[#e1cfb6]/80 py-6">
-          <div className="flex flex-col gap-3 text-center text-sm text-[#746b60] md:flex-row md:items-center md:justify-between md:text-left">
+        <div className="border-t border-[rgba(212,175,55,0.28)] py-6">
+          <div className="flex flex-col gap-3 text-center text-sm text-[rgba(251,250,246,0.58)] md:flex-row md:items-center md:justify-between md:text-left">
             <p>
-              © 2025 <span className="font-medium text-[#a4763c]">Lala Güzellik Merkezi</span>. Tüm hakları saklıdır.
+              © 2025 <span className="font-medium text-[var(--lale-gold)]">Lala Güzellik Merkezi</span>. Tüm hakları saklıdır.
             </p>
 
             <div className="flex items-center justify-center gap-5 md:justify-end">
@@ -138,14 +136,14 @@ const Footer = () => {
                 href="https://www.alceix.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-[#a4763c]"
+                className="transition-colors hover:text-[var(--lale-gold)]"
               >
                 Hakları Alceix tarafından saklıdır
               </a>
-              <Link href="/hakkimizda" className="transition-colors hover:text-[#a4763c]">
+              <Link href="/hakkimizda" className="transition-colors hover:text-[var(--lale-gold)]">
                 Gizlilik Politikası
               </Link>
-              <Link href="/iletisim" className="transition-colors hover:text-[#a4763c]">
+              <Link href="/iletisim" className="transition-colors hover:text-[var(--lale-gold)]">
                 İletişim
               </Link>
             </div>
