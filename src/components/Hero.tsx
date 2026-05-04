@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
 
           <h1 className="mt-8 font-serif text-[56px] leading-[0.92] text-[var(--lale-ivory)] sm:text-[88px] lg:text-[104px]">
-            Lala
+            Lale
             <span className="block text-[var(--lale-gold)]">Güzellik Evi</span>
           </h1>
 

@@ -20,8 +20,8 @@ const Footer = () => {
           <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr_0.85fr_1fr]">
             <div>
               <Image
-                src="/Lala_logo.png"
-                alt="Lala Güzellik Merkezi Logo"
+                src="/Lale_logo.png"
+                alt="Lale Güzellik Merkezi Logo"
                 width={190}
                 height={76}
                 className="h-12 w-auto"
@@ -128,7 +128,7 @@ const Footer = () => {
         <div className="border-t border-[rgba(212,175,55,0.28)] py-6">
           <div className="flex flex-col gap-3 text-center text-sm text-[rgba(251,250,246,0.58)] md:flex-row md:items-center md:justify-between md:text-left">
             <p>
-              © 2025 <span className="font-medium text-[var(--lale-gold)]">Lala Güzellik Merkezi</span>. Tüm hakları saklıdır.
+              © 2025 <span className="font-medium text-[var(--lale-gold)]">Lale Güzellik Merkezi</span>. Tüm hakları saklıdır.
             </p>
 
             <div className="flex items-center justify-center gap-5 md:justify-end">

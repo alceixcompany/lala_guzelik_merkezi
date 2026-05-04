@@ -148,7 +148,7 @@ const AdminLogin = () => {
         </div>
 
         <p className="mt-10 text-center text-[10px] tracking-[0.2em] text-[rgba(251,250,246,0.56)] uppercase">
-          Lalagüzeli Güzellik Merkezi &copy; {new Date().getFullYear()}
+          Lale Güzellik Merkezi &copy; {new Date().getFullYear()}
         </p>
       </motion.div>
     </div>

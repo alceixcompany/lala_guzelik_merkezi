@@ -60,12 +60,12 @@ const AboutPage = () => {
               </div>
 
               <h2 className="font-serif text-4xl sm:text-5xl text-[var(--lale-ivory)] mb-8 leading-tight">
-                Lala Güzellik <span className="text-[var(--lale-gold)]">Merkezi</span>
+                Lale Güzellik <span className="text-[var(--lale-gold)]">Merkezi</span>
               </h2>
 
               <div className="space-y-6 text-[rgba(251,250,246,0.68)] text-[17px] leading-relaxed">
                 <p>
-                  Lala Güzellik Merkezi, misafirlerine kendini özel hissettiren bir bakım deneyimi sunma hayaliyle yola çıktı. Kurulduğumuz günden bu yana profesyonel uygulamaları sıcak bir karşılama, yüksek hijyen standartları ve kişisel ilgiyle harmanlıyoruz.
+                  Lale Güzellik Merkezi, misafirlerine kendini özel hissettiren bir bakım deneyimi sunma hayaliyle yola çıktı. Kurulduğumuz günden bu yana profesyonel uygulamaları sıcak bir karşılama, yüksek hijyen standartları ve kişisel ilgiyle harmanlıyoruz.
                 </p>
                 <p>
                   Bugün uzman kadromuzla cilt bakımı, lazer epilasyon, kaş-kirpik ve vücut bakımı alanlarında kişiye özel çözümler sunuyoruz. Her randevuda doğal sonuç, konforlu süreç ve sürdürülebilir memnuniyet odağımızı koruyoruz.
@@ -94,7 +94,7 @@ const AboutPage = () => {
               <div className="relative aspect-[4/5] rounded-[48px] overflow-hidden border border-[rgba(212,175,55,0.22)] shadow-2xl">
                 <Image
                   src="/img/philosophy.png"
-                  alt="Lala Güzellik Felsefesi"
+                  alt="Lale Güzellik Felsefesi"
                   fill
                   className="object-cover"
                 />
@@ -102,7 +102,7 @@ const AboutPage = () => {
               <div className="absolute -inset-4 border border-[rgba(212,175,55,0.20)] rounded-[56px] -z-10 pointer-events-none" />
               <div className="absolute -bottom-6 -left-6 bg-[rgba(6,35,31,0.84)] p-8 rounded-[32px] shadow-xl hidden sm:block border border-[rgba(212,175,55,0.18)]">
                 <p className="font-serif text-[var(--lale-gold)] text-xl mb-1">“Güzellik, özgüvenle başlar.”</p>
-                <p className="text-xs tracking-widest text-[rgba(251,250,246,0.66)] uppercase">Lala Güzellik Felsefesi</p>
+                <p className="text-xs tracking-widest text-[rgba(251,250,246,0.66)] uppercase">Lale Güzellik Felsefesi</p>
               </div>
             </motion.div>
           </div>

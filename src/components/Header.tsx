@@ -76,11 +76,11 @@ const Header = () => {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative transition-all duration-300">
               <Image 
-                src="/Lala_logo.png"
-                alt="Lala Guzellik Merkezi Logo"
-                width={210}
-                height={84}
-                className="h-9 w-auto sm:h-10 md:h-11 lg:h-12 group-hover:scale-[1.02] transition-transform duration-300"
+                src="/Lale_logo.png"
+                alt="Lale Guzellik Merkezi Logo"
+                width={230}
+                height={92}
+                className="h-10 w-auto sm:h-11 md:h-12 lg:h-[3.25rem] group-hover:scale-[1.02] transition-transform duration-300"
                 priority
               />
             </div>
@@ -148,11 +148,11 @@ const Header = () => {
             <div className="flex items-center justify-between px-6 py-4 border-b border-[rgba(212,175,55,0.26)]">
               <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
                 <Image 
-                  src="/Lala_logo.png"
-                  alt="Lala Guzellik Merkezi Logo"
-                  width={140}
-                  height={56}
-                  className="h-9 w-auto"
+                  src="/Lale_logo.png"
+                  alt="Lale Guzellik Merkezi Logo"
+                  width={152}
+                  height={61}
+                  className="h-10 w-auto"
                   priority
                 />
               </Link>

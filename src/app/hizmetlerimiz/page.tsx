@@ -67,7 +67,7 @@ const ServicesPage = () => {
         <div className="absolute inset-0">
           <Image
             src="/banner/hizmetlerimiz_banner.png"
-            alt="Lala Güzellik Merkezi Hizmetlerimiz"
+            alt="Lale Güzellik Merkezi Hizmetlerimiz"
             fill
             priority
             className="object-cover"
@@ -192,7 +192,7 @@ const ServicesPage = () => {
         <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
-              NEDEN LALA
+              NEDEN LALE
             </div>
 
             <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">

@@ -118,7 +118,7 @@ const GaleriPage = () => {
         <div className="absolute inset-0">
           <Image
             src="/banner/galeri_banner.png"
-            alt="Lala Guzellik Merkezi Galeri"
+            alt="Lale Guzellik Merkezi Galeri"
             fill
             priority
             className="object-cover"

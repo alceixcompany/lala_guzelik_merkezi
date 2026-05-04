@@ -24,10 +24,10 @@ const dancingScript = Dancing_Script({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lalaguzellik.com"),
-  title: "Lala Güzellik Merkezi | Cilt Bakımı, Lazer Epilasyon ve Güzellik Hizmetleri",
-  description: "Lala Güzellik Merkezi'nde cilt bakımı, lazer epilasyon, kaş ve kirpik uygulamaları ile vücut bakım hizmetlerini sakin, zarif ve premium bir deneyimle keşfedin.",
+  title: "Lale Güzellik Merkezi | Cilt Bakımı, Lazer Epilasyon ve Güzellik Hizmetleri",
+  description: "Lale Güzellik Merkezi'nde cilt bakımı, lazer epilasyon, kaş ve kirpik uygulamaları ile vücut bakım hizmetlerini sakin, zarif ve premium bir deneyimle keşfedin.",
   keywords: [
-    "lala güzellik merkezi",
+    "lale güzellik merkezi",
     "güzellik merkezi",
     "cilt bakımı",
     "lazer epilasyon",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     "kirpik bakımı",
     "bakım merkezi istanbul"
   ].join(", "),
-  authors: [{ name: "Lala Güzellik Merkezi" }],
-  creator: "Lala Güzellik Merkezi",
-  publisher: "Lala Güzellik Merkezi",
+  authors: [{ name: "Lale Güzellik Merkezi" }],
+  creator: "Lale Güzellik Merkezi",
+  publisher: "Lale Güzellik Merkezi",
   robots: "index, follow",
   alternates: {
     canonical: "https://www.lalaguzellik.com"
@@ -75,26 +75,26 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Lala Güzellik Merkezi | Güzelliğinize Değer Katın",
+    title: "Lale Güzellik Merkezi | Güzelliğinize Değer Katın",
     description: "Cilt bakımı, lazer epilasyon, kaş ve kirpik uygulamaları ile huzurlu ve premium bir güzellik merkezi deneyimi.",
     type: "website",
     locale: "tr_TR",
-    siteName: "Lala Güzellik Merkezi",
+    siteName: "Lale Güzellik Merkezi",
     url: "https://www.lalaguzellik.com",
     images: [
       {
-        url: '/Lala_logo.png',
+        url: '/Lale_logo.png',
         width: 1200,
         height: 630,
-        alt: 'Lala Güzellik Merkezi'
+        alt: 'Lale Güzellik Merkezi'
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lala Güzellik Merkezi",
+    title: "Lale Güzellik Merkezi",
     description: "Cilt bakımı, lazer epilasyon ve premium güzellik hizmetleri.",
-    images: ['/Lala_logo.png']
+    images: ['/Lale_logo.png']
   },
 };
 

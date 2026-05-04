@@ -36,7 +36,7 @@ const servicesData = {
     gallery: [
       '/banner/guzelik_merkezi.png',
       '/img/philosophy.png',
-      '/Lala_logo.png'
+      '/Lale_logo.png'
     ]
   },
   'lazer-epilasyon': {
@@ -72,7 +72,7 @@ const servicesData = {
     gallery: [
       '/banner/guzelik_merkezi.png',
       '/img/philosophy.png',
-      '/Lala_logo.png'
+      '/Lale_logo.png'
     ]
   },
   'kas-ve-kirpik': {
@@ -108,7 +108,7 @@ const servicesData = {
     gallery: [
       '/banner/guzelik_merkezi.png',
       '/img/philosophy.png',
-      '/Lala_logo.png'
+      '/Lale_logo.png'
     ]
   },
   'vucut-bakimi': {
@@ -144,7 +144,7 @@ const servicesData = {
     gallery: [
       '/banner/guzelik_merkezi.png',
       '/img/philosophy.png',
-      '/Lala_logo.png'
+      '/Lale_logo.png'
     ]
   }
 };

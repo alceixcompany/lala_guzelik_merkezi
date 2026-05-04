@@ -70,7 +70,7 @@ const AdminSidebar = () => {
           isMobileOpen ? 'translate-x-0' : '-translate-x-full'
         }`}>
           <div className="flex items-center justify-between h-16 px-4 border-b border-[rgba(212,175,55,0.18)]">
-            <h1 className="text-xl font-bold text-[var(--lale-ivory)]">Lala Admin</h1>
+            <h1 className="text-xl font-bold text-[var(--lale-ivory)]">Lale Admin</h1>
             <button
               onClick={toggleMobileMenu}
               className="text-[rgba(251,250,246,0.62)] hover:text-[var(--lale-gold)]"
@@ -138,7 +138,7 @@ const AdminSidebar = () => {
       <div className="hidden lg:flex lg:flex-shrink-0">
         <div className="w-64 border-r border-[rgba(212,175,55,0.18)] bg-[rgba(6,35,31,0.94)] shadow-[0_28px_80px_rgba(0,0,0,0.34)] backdrop-blur">
           <div className="flex items-center justify-center h-16 px-4 border-b border-[rgba(212,175,55,0.18)]">
-            <h1 className="text-xl font-bold text-[var(--lale-ivory)]">Lala Admin</h1>
+            <h1 className="text-xl font-bold text-[var(--lale-ivory)]">Lale Admin</h1>
           </div>
           
           {/* Admin Info - Desktop */}
