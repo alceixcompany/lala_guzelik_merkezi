@@ -40,13 +40,14 @@ const WhyChooseUs = () => {
                 </div>
 
                 <Image
-                  src="/banner/guzelik_merkezi.png"
+                  src="/banner/hero_image_2.png"
                   alt="Güzellik merkezi atmosferi"
                   width={900}
                   height={700}
-                  className="h-[380px] w-full object-cover object-[68%_center] grayscale"
+                  className="ml-auto h-[380px] w-full max-w-[88%] object-cover object-right grayscale"
                 />
 
+                <div className="absolute inset-y-0 left-0 z-[1] w-24 bg-[linear-gradient(90deg,rgba(6,35,31,0.94)_0%,rgba(6,35,31,0.74)_34%,rgba(6,35,31,0.28)_72%,transparent_100%)] sm:w-28 lg:w-32" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(6,35,31,0.45)] via-transparent to-transparent" />
               </div>
 

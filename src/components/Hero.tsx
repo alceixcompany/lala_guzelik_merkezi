@@ -4,23 +4,24 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[var(--lale-emerald-deep)]">
-      <div className="absolute inset-0">
+      <div className="absolute inset-y-0 right-0 w-full md:w-[58%] lg:w-[50%] xl:w-[46%]">
         <Image
-          src="/banner/guzelik_merkezi.png"
+          src="/banner/hero_image_2.png"
           alt="Güzellik Merkezi"
           fill
           priority
-          className="object-cover object-[70%_center] lg:object-right"
+          className="object-cover object-center md:object-right"
           sizes="100vw"
           quality={90}
         />
+        <div className="absolute inset-y-0 left-0 w-28 bg-[linear-gradient(90deg,var(--lale-emerald-deep)_0%,rgba(6,35,31,0.88)_34%,rgba(6,35,31,0.42)_68%,transparent_100%)] sm:w-36 lg:w-44" />
       </div>
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,35,31,0.96)_0%,rgba(6,35,31,0.92)_30%,rgba(6,35,31,0.78)_52%,rgba(6,35,31,0.36)_75%,rgba(6,35,31,0.08)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,35,31,0.96)_0%,rgba(6,35,31,0.92)_32%,rgba(6,35,31,0.84)_52%,rgba(6,35,31,0.54)_72%,rgba(6,35,31,0.16)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(13,77,63,0.42),rgba(6,35,31,0.24)_36%,transparent_62%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_20%,rgba(212,175,55,0.12),transparent_24%)]" />
       <div className="absolute bottom-0 left-0 right-0 h-28 bg-[linear-gradient(180deg,transparent,var(--lale-emerald-deep))]" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 py-28 sm:px-7 lg:px-10">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-44 pt-28 sm:px-7 sm:pb-56 lg:px-10">
         <div className="max-w-[650px] pt-10">
           <div className="inline-flex items-center gap-3 border-y border-[rgba(212,175,55,0.26)] py-3 text-xs font-semibold uppercase tracking-[0.34em] text-[var(--lale-gold)] sm:text-sm">
             Doğallık · Güzellik · Güven

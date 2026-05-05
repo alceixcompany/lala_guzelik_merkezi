@@ -45,9 +45,9 @@ const Services = () => {
   return (
     <section
       id="hizmetler"
-      className="lale-dark-section py-24 sm:py-28"
+      className="lale-dark-section pb-24 pt-36 sm:pb-28 sm:pt-44"
     >
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
+      <div className="relative mt-20 mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <div className="lale-kicker bg-[rgba(6,35,31,0.56)]">
             İMZA BAKIMLAR
