@@ -107,6 +107,14 @@ const AdminMessages = () => {
       case 'lazer-epilasyon': return 'Lazer Epilasyon';
       case 'kas-kirpik': return 'Kaş ve Kirpik';
       case 'vucut-bakimi': return 'Vücut Bakımı';
+      case 'bolgesel-zayiflama': return 'Bölgesel Zayıflama';
+      case 'ipek-kirpik': return 'İpek Kirpik';
+      case 'protez-tirnak': return 'Protez Tırnak';
+      case 'leke-bakimi': return 'Leke Bakımı';
+      case 'masaj': return 'Masaj';
+      case 'kalici-makyaj': return 'Kalıcı Makyaj';
+      case 'hydrafacial': return 'Hydrafacial';
+      case 'akne-bakimi': return 'Akne Bakımı';
       case 'danismanlik': return 'Kişisel Danışmanlık';
       case 'randevu': return 'Randevu Planlama';
       case 'diger': return 'Diğer';

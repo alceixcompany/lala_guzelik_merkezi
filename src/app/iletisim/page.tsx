@@ -206,6 +206,14 @@ const ContactPage = () => {
                           <option value="lazer-epilasyon">Lazer Epilasyon</option>
                           <option value="kas-kirpik">Kaş ve Kirpik</option>
                           <option value="vucut-bakimi">Vücut Bakımı</option>
+                          <option value="bolgesel-zayiflama">Bölgesel Zayıflama</option>
+                          <option value="ipek-kirpik">İpek Kirpik</option>
+                          <option value="protez-tirnak">Protez Tırnak</option>
+                          <option value="leke-bakimi">Leke Bakımı</option>
+                          <option value="masaj">Masaj</option>
+                          <option value="kalici-makyaj">Kalıcı Makyaj</option>
+                          <option value="hydrafacial">Hydrafacial</option>
+                          <option value="akne-bakimi">Akne Bakımı</option>
                           <option value="diger">Diğer</option>
                         </select>
                       </div>
@@ -270,9 +278,9 @@ const ContactPage = () => {
                 
                 <div className="space-y-8">
                   {[
-                    { icon: FiPhone, title: "Telefon", value: "0532 699 15 52", sub: "Randevu & Bilgi Hattı" },
+                    { icon: FiPhone, title: "Telefon", value: "0546 104 59 00", sub: "Randevu & Bilgi Hattı" },
                     { icon: FiMail, title: "E-posta", value: "info@lalaguzellik.com", sub: "7/24 Destek" },
-                    { icon: FiMapPin, title: "Adres", value: "Bulgurlu, Söğütlü Çayır Cd. No:25, Üsküdar/İstanbul", sub: "Konum İçin Tıklayın" },
+                    { icon: FiMapPin, title: "Adres", value: "Şirinevler Mahallesi Meriç Sokak No: 18 Kat: 4 Daire: 4, Bahçelievler / İstanbul", sub: "Akbank'ın üstü" },
                     { icon: FiClock, title: "Çalışma Saatleri", value: "Randevu İle Hizmet Verilmektedir", sub: "Pazartesi - Cumartesi" }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-6 items-start group">
@@ -297,7 +305,7 @@ const ContactPage = () => {
                 className="relative aspect-square sm:aspect-video lg:aspect-auto lg:h-[350px] rounded-[32px] overflow-hidden border border-[rgba(212,175,55,0.18)] shadow-lg"
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.410196932205!2d29.08066567608579!3d41.016280871349366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac900363b9941%3A0x89eb3fe47951dfc2!2zTWlyYW4gVmluw6cg4oCTIFNlcGV0bGkgVmluw6cgS2lyYWxhbWE!5e0!3m2!1str!2saz!4v1762961440021!5m2!1str!2saz"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3184.0400509927945!2d28.842329076039675!3d40.99229797135275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzMyLjMiTiAyOMKwNTAnNDEuNyJF!5e1!3m2!1str!2saz!4v1778048676704!5m2!1str!2saz"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

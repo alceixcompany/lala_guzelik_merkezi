@@ -5,6 +5,34 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FiTarget, FiEye, FiCheckCircle, FiHeart, FiShield, FiClock } from 'react-icons/fi';
 
+const awards = [
+  {
+    year: '2021',
+    title: '4. Türk Azerbaycan Kardeşlik Ödülü',
+    subtitle: 'En İyi Kozmetik Uzmanı',
+  },
+  {
+    year: '2022',
+    title: 'Altın Melek Ödülü Türkiye',
+    subtitle: 'Yılın En Başarılı Güzellik Salonu',
+  },
+  {
+    year: '2023',
+    title: 'Gold Face Azerbaycam',
+    subtitle: 'Yılın En İyi Dermatoloğu',
+  },
+  {
+    year: '2024',
+    title: 'Diamont of Ozbekistan',
+    subtitle: 'Yılın En İyi Dermatoloğu',
+  },
+  {
+    year: '2025',
+    title: 'Uluslararası Balıkesir Sağlık Bilimleri Akademik Araştırma Kongresi - Türkiye',
+    subtitle: '',
+  },
+];
+
 const AboutPage = () => {
   return (
     <div className="page-flow min-h-screen bg-[var(--lale-emerald-deep)]">
@@ -111,6 +139,61 @@ const AboutPage = () => {
 
       <section className="lale-dark-section py-24 relative">
         <div className="mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
+          <div className="relative overflow-hidden rounded-[32px] border border-[rgba(212,175,55,0.18)] bg-[linear-gradient(135deg,rgba(7,37,33,0.98)_0%,rgba(8,49,42,0.94)_55%,rgba(10,65,55,0.88)_100%)] px-6 py-16 shadow-[0_30px_80px_rgba(0,0,0,0.22)] sm:px-10 lg:px-14">
+            <div className="absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.14)_0%,rgba(212,175,55,0)_68%)] pointer-events-none" />
+            <div className="absolute -right-20 top-0 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(15,99,81,0.32)_0%,rgba(15,99,81,0)_70%)] pointer-events-none" />
+
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="relative"
+            >
+              <div className="text-center mb-14">
+                <p className="text-sm tracking-[0.35em] text-[rgba(251,250,246,0.74)] uppercase mb-4">Uluslararası</p>
+                <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[var(--lale-gold)] mb-5">
+                  Ödüllerimiz
+                </h2>
+                <div className="mx-auto h-px w-40 bg-[linear-gradient(90deg,transparent,rgba(212,175,55,0.85),transparent)]" />
+              </div>
+
+              <div className="space-y-8">
+                {awards.map((award, index) => (
+                  <motion.div
+                    key={award.year}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.55, delay: index * 0.06 }}
+                    className="grid grid-cols-1 gap-5 rounded-[28px] border border-[rgba(212,175,55,0.12)] bg-[rgba(251,250,246,0.03)] p-6 sm:grid-cols-[140px_1fr] sm:items-center sm:gap-8 sm:p-8"
+                  >
+                    <div className="flex items-center justify-center">
+                      <div className="flex h-24 w-24 items-center justify-center rounded-full border border-[rgba(212,175,55,0.34)] bg-[rgba(212,175,55,0.06)] text-3xl font-serif text-[var(--lale-gold)] shadow-inner shadow-[rgba(212,175,55,0.1)]">
+                        {award.year}
+                      </div>
+                    </div>
+
+                    <div className="text-center sm:text-left">
+                      <h3 className="font-serif text-2xl text-[var(--lale-ivory)] leading-snug">
+                        {award.title}
+                      </h3>
+                      {award.subtitle && (
+                        <p className="mt-3 text-lg text-[rgba(251,250,246,0.76)] uppercase tracking-[0.08em]">
+                          {award.subtitle}
+                        </p>
+                      )}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="lale-dark-section py-24 relative">
+        <div className="mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               whileHover={{ y: -5 }}
@@ -187,7 +270,7 @@ const AboutPage = () => {
                 İLETİŞİME GEÇİN
               </Link>
               <a
-                href="tel:+905326991552"
+                href="tel:+905461045900"
                 className="lale-outline-button"
               >
                 HEMEN ARA

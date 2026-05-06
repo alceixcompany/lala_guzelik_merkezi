@@ -146,6 +146,294 @@ const servicesData = {
       '/img/philosophy.png',
       '/Lale_logo.png'
     ]
+  },
+  'bolgesel-zayiflama': {
+    id: 'bolgesel-zayiflama',
+    title: 'Bölgesel Zayıflama',
+    icon: '✨',
+    description: 'Bölgesel incelme hedefinize uygun planlanan profesyonel seanslar.',
+    heroImage: '/banner/guzelik_merkezi.png',
+    features: [
+      'Bölgesel değerlendirme',
+      'Kişisel seans planlaması',
+      'Sıkılaşma desteği',
+      'Düzenli takip süreci',
+      'Konforlu uygulama akışı',
+      'Süreç önerileri'
+    ],
+    detailedInfo: {
+      overview: 'Bölgesel zayıflama hizmetimiz, ihtiyaç duyulan alanlara odaklanan ve kişisel hedefinize göre şekillenen bir bakım planı sunar.',
+      whyChoose: [
+        'Kişisel hedef odaklı yaklaşım',
+        'Planlı ve düzenli seans akışı',
+        'Konforlu merkez deneyimi',
+        'Takip ve yönlendirme desteği',
+        'Daha dengeli görünüm hedefi'
+      ],
+      process: [
+        { step: 1, title: 'Ön Değerlendirme', description: 'Beklentiniz ve odak bölgeler birlikte belirlenir' },
+        { step: 2, title: 'Seans Planı', description: 'Kişiye uygun bakım akışı oluşturulur' },
+        { step: 3, title: 'Uygulama', description: 'Planlanan işlem konforlu şekilde uygulanır' },
+        { step: 4, title: 'Takip', description: 'Devam süreci için öneriler paylaşılır' }
+      ]
+    },
+    gallery: [
+      '/banner/guzelik_merkezi.png',
+      '/img/philosophy.png',
+      '/Lale_logo.png'
+    ]
+  },
+  'ipek-kirpik': {
+    id: 'ipek-kirpik',
+    title: 'İpek Kirpik',
+    icon: '👁️',
+    description: 'Bakışları belirginleştiren, zarif ve doğal görünümlü ipek kirpik uygulamaları.',
+    heroImage: '/banner/guzelik_merkezi.png',
+    features: [
+      'Göz yapısına uygun planlama',
+      'Doğal görünüm odağı',
+      'Uzunluk ve yoğunluk seçimi',
+      'Nazik uygulama süreci',
+      'Bakım önerileri',
+      'Zarif bitiş'
+    ],
+    detailedInfo: {
+      overview: 'İpek kirpik uygulamamız, bakışları güçlendirirken yüz ifadesine uyumlu ve bakımlı bir görünüm oluşturmayı hedefler.',
+      whyChoose: [
+        'Yüzünüze uygun tasarım',
+        'Doğal etkiyi koruyan yaklaşım',
+        'Özenli uygulama adımları',
+        'Konforlu işlem süreci',
+        'Kalıcı bakımlı görünüm'
+      ],
+      process: [
+        { step: 1, title: 'Göz Analizi', description: 'Göz formu ve beklenti değerlendirilir' },
+        { step: 2, title: 'Tasarım Seçimi', description: 'Uygun yoğunluk ve uzunluk belirlenir' },
+        { step: 3, title: 'Uygulama', description: 'İşlem dikkatli ve kontrollü şekilde yapılır' },
+        { step: 4, title: 'Koruma Önerileri', description: 'Kullanım ve bakım bilgileri paylaşılır' }
+      ]
+    },
+    gallery: [
+      '/banner/guzelik_merkezi.png',
+      '/img/philosophy.png',
+      '/Lale_logo.png'
+    ]
+  },
+  'protez-tirnak': {
+    id: 'protez-tirnak',
+    title: 'Protez Tırnak',
+    icon: '💅',
+    description: 'Şık, düzenli ve estetik bir görünüm sunan protez tırnak uygulamaları.',
+    heroImage: '/banner/guzelik_merkezi.png',
+    features: [
+      'El yapısına uygun form',
+      'Uzunluk ve şekil seçimi',
+      'Bakımlı görünüm',
+      'Özenli uygulama',
+      'Kişisel stil desteği',
+      'Koruma önerileri'
+    ],
+    detailedInfo: {
+      overview: 'Protez tırnak hizmetimiz, el yapınıza ve stilinize uygun estetik bir görünüm elde etmek için kişisel seçimlerle planlanır.',
+      whyChoose: [
+        'Kişiye özel şekillendirme',
+        'Zarif ve düzenli sonuç',
+        'Titiz uygulama süreci',
+        'Bakımlı görünüm desteği',
+        'Stilinize uyumlu seçenekler'
+      ],
+      process: [
+        { step: 1, title: 'Karar Aşaması', description: 'Form, uzunluk ve beklenti netleştirilir' },
+        { step: 2, title: 'Hazırlık', description: 'Tırnak yapısı uygulamaya uygun hale getirilir' },
+        { step: 3, title: 'Uygulama', description: 'Protez tırnak işlemi özenle gerçekleştirilir' },
+        { step: 4, title: 'Son Kontrol', description: 'Bakım ve kullanım önerileri paylaşılır' }
+      ]
+    },
+    gallery: [
+      '/banner/guzelik_merkezi.png',
+      '/img/philosophy.png',
+      '/Lale_logo.png'
+    ]
+  },
+  'leke-bakimi': {
+    id: 'leke-bakimi',
+    title: 'Leke Bakımı',
+    icon: '🌿',
+    description: 'Cilt tonunu dengelemeye destek olan profesyonel leke bakım uygulamaları.',
+    heroImage: '/banner/guzelik_merkezi.png',
+    features: [
+      'Cilt tonu analizi',
+      'Leke görünümüne uygun bakım',
+      'Dengeleyici uygulamalar',
+      'Nazik yaklaşım',
+      'Kişisel bakım planı',
+      'Takip önerileri'
+    ],
+    detailedInfo: {
+      overview: 'Leke bakımı hizmetimiz, cildinizin durumunu analiz ederek ton eşitsizliklerine yönelik dengeli bir bakım süreci sunar.',
+      whyChoose: [
+        'Cilde uygun uygulama seçimi',
+        'Nazik ve kontrollü süreç',
+        'Düzenli bakım planlaması',
+        'Kişisel yönlendirme desteği',
+        'Daha aydınlık görünüm hedefi'
+      ],
+      process: [
+        { step: 1, title: 'Cilt İncelemesi', description: 'Leke görünümü ve cilt yapısı değerlendirilir' },
+        { step: 2, title: 'Planlama', description: 'Uygun bakım adımları belirlenir' },
+        { step: 3, title: 'Bakım Uygulaması', description: 'Seans profesyonel şekilde uygulanır' },
+        { step: 4, title: 'Devam Önerileri', description: 'Ev bakımı ve takip önerileri paylaşılır' }
+      ]
+    },
+    gallery: [
+      '/banner/guzelik_merkezi.png',
+      '/img/philosophy.png',
+      '/Lale_logo.png'
+    ]
+  },
+  'masaj': {
+    id: 'masaj',
+    title: 'Masaj',
+    icon: '💆',
+    description: 'Bedensel rahatlama ve zihinsel yenilenme hissi sunan profesyonel masaj seansları.',
+    heroImage: '/banner/guzelik_merkezi.png',
+    features: [
+      'Rahatlatıcı seans akışı',
+      'Kas gevşetici etki',
+      'Sakin atmosfer',
+      'Kişisel ihtiyaç odağı',
+      'Yenilenme hissi',
+      'Düzenli seans önerileri'
+    ],
+    detailedInfo: {
+      overview: 'Masaj hizmetimiz, yoğun günlük temponun etkilerini azaltmak ve bedeninizi rahatlatmak için kişiye özel planlanır.',
+      whyChoose: [
+        'Sakin ve huzurlu merkez deneyimi',
+        'İhtiyaca göre uyarlanan seans',
+        'Rahatlatıcı uygulama akışı',
+        'Konfor odaklı yaklaşım',
+        'Bedensel yenilenme hissi'
+      ],
+      process: [
+        { step: 1, title: 'İhtiyaç Analizi', description: 'Odak alanlar ve beklentiler konuşulur' },
+        { step: 2, title: 'Seans Planı', description: 'Uygun masaj akışı belirlenir' },
+        { step: 3, title: 'Masaj Uygulaması', description: 'Konforlu bir seans gerçekleştirilir' },
+        { step: 4, title: 'Sonrası Öneriler', description: 'Rahatlamayı destekleyen yönlendirmeler paylaşılır' }
+      ]
+    },
+    gallery: [
+      '/banner/guzelik_merkezi.png',
+      '/img/philosophy.png',
+      '/Lale_logo.png'
+    ]
+  },
+  'kalici-makyaj': {
+    id: 'kalici-makyaj',
+    title: 'Kalıcı Makyaj',
+    icon: '✨',
+    description: 'Yüz hatlarını doğal biçimde belirginleştiren kalıcı makyaj uygulamaları.',
+    heroImage: '/banner/guzelik_merkezi.png',
+    features: [
+      'Kişisel tasarım planı',
+      'Doğal görünüm odağı',
+      'Yüz hatlarına uyum',
+      'Özenli uygulama',
+      'Uzun süreli konfor',
+      'Bakım sonrası öneriler'
+    ],
+    detailedInfo: {
+      overview: 'Kalıcı makyaj hizmetimiz, günlük rutini kolaylaştıran ama doğallığı koruyan estetik bir görünüm hedefiyle planlanır.',
+      whyChoose: [
+        'Yüz yapısına uygun tasarım',
+        'Doğal sonuç odağı',
+        'Titiz ve kontrollü işlem süreci',
+        'Uzun vadeli kullanım konforu',
+        'Kişisel beklentiye göre şekillenen görünüm'
+      ],
+      process: [
+        { step: 1, title: 'Ön Görüşme', description: 'İstenen görünüm ve yüz hatları değerlendirilir' },
+        { step: 2, title: 'Tasarım', description: 'Uygun şekil ve yoğunluk belirlenir' },
+        { step: 3, title: 'Uygulama', description: 'İşlem profesyonel biçimde uygulanır' },
+        { step: 4, title: 'Bakım Süreci', description: 'İyileşme ve koruma önerileri paylaşılır' }
+      ]
+    },
+    gallery: [
+      '/banner/guzelik_merkezi.png',
+      '/img/philosophy.png',
+      '/Lale_logo.png'
+    ]
+  },
+  'hydrafacial': {
+    id: 'hydrafacial',
+    title: 'Hydrafacial',
+    icon: '💧',
+    description: 'Arındırma, nemlendirme ve canlandırmayı bir araya getiren hydrafacial bakımı.',
+    heroImage: '/banner/guzelik_merkezi.png',
+    features: [
+      'Derin temizlik desteği',
+      'Yoğun nem bakımı',
+      'Canlı görünüm etkisi',
+      'Nazik uygulama süreci',
+      'Kişisel cilt yaklaşımı',
+      'Seans sonrası öneriler'
+    ],
+    detailedInfo: {
+      overview: 'Hydrafacial hizmetimiz, cildi yormadan arındıran ve yoğun nem desteğiyle daha taze bir görünüm sunan bir bakım deneyimidir.',
+      whyChoose: [
+        'Arındırma ve nemi bir arada sunar',
+        'Cildi yormayan yaklaşım',
+        'Anında taze görünüm hissi',
+        'Kişisel bakım planlaması',
+        'Konforlu seans akışı'
+      ],
+      process: [
+        { step: 1, title: 'Cilt Analizi', description: 'Cildin ihtiyaçları değerlendirilir' },
+        { step: 2, title: 'Hazırlık', description: 'Bakım akışı cilde uygun şekilde planlanır' },
+        { step: 3, title: 'Hydrafacial Uygulaması', description: 'Arındırma ve nemlendirme adımları uygulanır' },
+        { step: 4, title: 'Koruma Önerileri', description: 'Cilt görünümünü destekleyen öneriler paylaşılır' }
+      ]
+    },
+    gallery: [
+      '/banner/guzelik_merkezi.png',
+      '/img/philosophy.png',
+      '/Lale_logo.png'
+    ]
+  },
+  'akne-bakimi': {
+    id: 'akne-bakimi',
+    title: 'Akne Bakımı',
+    icon: '🌿',
+    description: 'Akneye eğilimli ciltler için dengeleyici ve arındırıcı profesyonel bakım uygulamaları.',
+    heroImage: '/banner/guzelik_merkezi.png',
+    features: [
+      'Akneye uygun cilt analizi',
+      'Arındırıcı bakım adımları',
+      'Sebum dengeleme desteği',
+      'Nazik uygulama yaklaşımı',
+      'Hassas cilt odağı',
+      'Takip önerileri'
+    ],
+    detailedInfo: {
+      overview: 'Akne bakımı hizmetimiz, cildi dengelemeye yardımcı olan ve daha sakin bir görünüm hedefleyen profesyonel uygulamalar içerir.',
+      whyChoose: [
+        'Akneye eğilimli ciltlere uygun yaklaşım',
+        'Nazik ve kontrollü bakım süreci',
+        'Düzenli bakım planlaması',
+        'Cilt bariyerini gözeten uygulamalar',
+        'Kişisel yönlendirme desteği'
+      ],
+      process: [
+        { step: 1, title: 'Cilt Değerlendirmesi', description: 'Akne durumu ve cilt yapısı incelenir' },
+        { step: 2, title: 'Bakım Planı', description: 'Uygun arındırma ve dengeleme akışı belirlenir' },
+        { step: 3, title: 'Profesyonel Uygulama', description: 'Bakım adımları kontrollü şekilde uygulanır' },
+        { step: 4, title: 'Devam Süreci', description: 'Cilt bakım rutini için öneriler sunulur' }
+      ]
+    },
+    gallery: [
+      '/banner/guzelik_merkezi.png',
+      '/img/philosophy.png',
+      '/Lale_logo.png'
+    ]
   }
 };
 
@@ -192,10 +480,10 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                 📞 Randevu Planla
               </a>
               <a
-                href="tel:+905326991552"
+                href="tel:+905461045900"
                 className="lale-outline-button"
               >
-                📱 Hemen Ara: 0532 699 15 52
+                📱 Hemen Ara: 0546 104 59 00
               </a>
             </div>
           </div>

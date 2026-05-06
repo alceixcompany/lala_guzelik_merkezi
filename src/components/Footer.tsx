@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className="lale-dark-section lale-footer text-[var(--lale-ivory)]">
       <div className="relative mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
         <div className="border-t border-[rgba(212,175,55,0.28)] py-16">
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr_0.85fr_1fr]">
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.78fr_1.22fr_1fr] lg:gap-12">
             <div>
               <Image
                 src="/Lale_logo.png"
@@ -43,7 +43,7 @@ const Footer = () => {
                   <FiInstagram className="h-4 w-4" />
                 </a>
                 <a
-                  href="tel:+905326991552"
+                  href="tel:+905461045900"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(212,175,55,0.38)] bg-[rgba(255,255,255,0.06)] text-[var(--lale-gold)] transition-colors hover:bg-[rgba(212,175,55,0.12)]"
                   title="Telefon"
                 >
@@ -92,12 +92,19 @@ const Footer = () => {
 
             <div>
               <h3 className="font-serif text-2xl text-[var(--lale-gold)]">Bakımlar</h3>
-              <ul className="mt-5 space-y-3 text-sm text-[rgba(251,250,246,0.70)]">
+              <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-[rgba(251,250,246,0.70)]">
                 <li>Cilt Bakımı</li>
                 <li>Lazer Epilasyon</li>
                 <li>Kaş ve Kirpik</li>
                 <li>Vücut Bakımı</li>
-                <li>Kişisel Danışmanlık</li>
+                <li>Bölgesel Zayıflama</li>
+                <li>İpek Kirpik</li>
+                <li>Protez Tırnak</li>
+                <li>Leke Bakımı</li>
+                <li>Masaj</li>
+                <li>Kalıcı Makyaj</li>
+                <li>Hydrafacial</li>
+                <li>Akne Bakımı</li>
               </ul>
             </div>
 
@@ -106,12 +113,12 @@ const Footer = () => {
               <ul className="mt-5 space-y-4 text-sm text-[rgba(251,250,246,0.70)]">
                 <li className="flex items-start gap-3">
                   <FiMapPin className="mt-1 h-4 w-4 text-[var(--lale-gold)]" />
-                  <span>Bulgurlu, Söğütlü Çayır Cd. No:25 Üsküdar / İstanbul</span>
+                  <span>Şirinevler Mahallesi Meriç Sokak No: 18 Kat: 4 Daire: 4, Akbank&apos;ın üstü, Bahçelievler / İstanbul</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <FiPhone className="h-4 w-4 text-[var(--lale-gold)]" />
-                  <a href="tel:+905326991552" className="transition-colors hover:text-[var(--lale-gold)]">
-                    +90 532 699 15 52
+                  <a href="tel:+905461045900" className="transition-colors hover:text-[var(--lale-gold)]">
+                    +90 546 104 59 00
                   </a>
                 </li>
                 <li className="flex items-center gap-3">

@@ -74,6 +74,54 @@ const services = [
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   },
+  {
+    url: '/hizmetlerimiz/bolgesel-zayiflama',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
+  {
+    url: '/hizmetlerimiz/ipek-kirpik',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
+  {
+    url: '/hizmetlerimiz/protez-tirnak',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
+  {
+    url: '/hizmetlerimiz/leke-bakimi',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
+  {
+    url: '/hizmetlerimiz/masaj',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
+  {
+    url: '/hizmetlerimiz/kalici-makyaj',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
+  {
+    url: '/hizmetlerimiz/hydrafacial',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
+  {
+    url: '/hizmetlerimiz/akne-bakimi',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

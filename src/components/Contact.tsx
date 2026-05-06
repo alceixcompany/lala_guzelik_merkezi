@@ -29,10 +29,10 @@ const Contact = () => {
             </div>
             <h3 className="text-lg font-semibold text-[var(--lale-ivory)] mb-3">Telefon</h3>
             <a
-              href="tel:+905326991552"
+              href="tel:+905461045900"
               className="text-lg font-medium text-[var(--lale-gold)] hover:text-[var(--lale-gold-soft)] transition-colors"
             >
-              +90 532 699 15 52
+              +90 546 104 59 00
             </a>
             <p className="text-[rgba(251,250,246,0.62)] text-sm mt-3">Randevu ve bilgi için hemen ulaşın</p>
           </div>
@@ -57,9 +57,9 @@ const Contact = () => {
             </div>
             <h3 className="text-lg font-semibold text-[var(--lale-ivory)] mb-3">Adres</h3>
             <p className="text-base text-[var(--lale-ivory)]">
-              Bulgurlu, Söğütlü Çayır Cd. No:25
+              Şirinevler Mahallesi Meriç Sokak No: 18
             </p>
-            <p className="text-[rgba(251,250,246,0.62)] text-sm mt-3">34696 Üsküdar / İstanbul</p>
+            <p className="text-[rgba(251,250,246,0.62)] text-sm mt-3">Kat: 4 Daire: 4, Akbank&apos;ın üstü, Bahçelievler / İstanbul</p>
           </div>
         </div>
 

@@ -11,7 +11,7 @@ const services = [
     description:
       'Cildinizin ihtiyacına uygun arındırma, nemlendirme ve canlandırma uygulamalarıyla daha dengeli ve ışıltılı bir görünüm hedefliyoruz.',
     highlights: ['Kişisel cilt analizi', 'Derin temizlik', 'Nem dengesi desteği'],
-    image: '/hizmetler/hizmet1.jpeg',
+    image: '/hizmetler/cilt-bakimi.png',
   },
   {
     slug: 'lazer-epilasyon',
@@ -20,7 +20,7 @@ const services = [
     description:
       'Modern cihazlar ve planlı seans akışı ile konforlu bir süreçte pürüzsüz görünüme ulaşmanıza destek oluyoruz.',
     highlights: ['Bölgesel uygulama', 'Düzenli takip', 'Konforlu seans planı'],
-    image: '/hizmetler/hizmet2.webp',
+    image: '/hizmetler/lazer-epilasyon.png',
   },
   {
     slug: 'kas-ve-kirpik',
@@ -29,7 +29,7 @@ const services = [
     description:
       'Kaş tasarımı ve kirpik uygulamalarında yüzünüze uyumlu, belirgin ama doğal bir etki oluşturuyoruz.',
     highlights: ['Doğal yüz uyumu', 'Zarif bitiş', 'Kişisel tasarım yaklaşımı'],
-    image: '/hizmetler/himzet3.jpg',
+    image: '/hizmetler/kas-ve-kirpik.png',
   },
   {
     slug: 'vucut-bakimi',
@@ -38,7 +38,79 @@ const services = [
     description:
       'Rahatlama, toparlanma ve yenilenme hissi veren profesyonel bakımlarla kendinize ayırdığınız zamanı özel hale getiriyoruz.',
     highlights: ['Rahatlatıcı deneyim', 'Bütünsel yaklaşım', 'Kişisel seans planı'],
-    image: '/hizmetler/hizmet4.webp',
+    image: '/hizmetler/vucut-bakimi.png',
+  },
+  {
+    slug: 'bolgesel-zayiflama',
+    icon: FiSun,
+    title: 'Bölgesel Zayıflama',
+    description:
+      'Bölgesel incelme hedefinize uygun planlanan seanslarla daha sıkı ve dengeli bir görünümü destekliyoruz.',
+    highlights: ['Bölgesel uygulama planı', 'Düzenli takip', 'Kişisel hedef odaklı yaklaşım'],
+    image: '/hizmetler/bolgesel-zayiflama.png',
+  },
+  {
+    slug: 'ipek-kirpik',
+    icon: FiFeather,
+    title: 'İpek Kirpik',
+    description:
+      'Bakışları belirginleştiren, yüzünüze uyumlu ve zarif sonuçlar sunan ipek kirpik uygulamaları gerçekleştiriyoruz.',
+    highlights: ['Doğal görünüm etkisi', 'Kişisel tasarım', 'Bakımlı bitiş'],
+    image: '/hizmetler/ipek-kirpik.png',
+  },
+  {
+    slug: 'protez-tirnak',
+    icon: FiCheck,
+    title: 'Protez Tırnak',
+    description:
+      'El yapınıza ve stilinize uygun, estetik ve özenli protez tırnak uygulamalarıyla bakımlı bir görünüm sağlıyoruz.',
+    highlights: ['Şekil ve uzunluk seçimi', 'Özenli uygulama', 'Zarif sonuç'],
+    image: '/hizmetler/protez-tirnak.png',
+  },
+  {
+    slug: 'leke-bakimi',
+    icon: FiSmile,
+    title: 'Leke Bakımı',
+    description:
+      'Cilt tonunu dengelemeye ve leke görünümünü azaltmaya yönelik profesyonel bakım protokolleri sunuyoruz.',
+    highlights: ['Cilt analizi', 'Ton eşitleme desteği', 'Kişisel bakım planı'],
+    image: '/hizmetler/leke-bakimi.png',
+  },
+  {
+    slug: 'masaj',
+    icon: FiHeart,
+    title: 'Masaj',
+    description:
+      'Yoğun temponuzu hafifleten, gevşeme ve yenilenme hissi sunan rahatlatıcı masaj seansları planlıyoruz.',
+    highlights: ['Rahatlatıcı deneyim', 'Kas gevşetici etki', 'Sakin atmosfer'],
+    image: '/hizmetler/masaj.png',
+  },
+  {
+    slug: 'kalici-makyaj',
+    icon: FiFeather,
+    title: 'Kalıcı Makyaj',
+    description:
+      'Yüz hatlarınıza uyumlu, günlük rutini kolaylaştıran ve doğal görünümü koruyan kalıcı makyaj uygulamaları yapıyoruz.',
+    highlights: ['Doğal hat vurgusu', 'Kişiye özel tasarım', 'Uzun süreli konfor'],
+    image: '/hizmetler/kalici-makyaj.png',
+  },
+  {
+    slug: 'hydrafacial',
+    icon: FiSmile,
+    title: 'Hydrafacial',
+    description:
+      'Arındırma, nemlendirme ve canlandırmayı bir arada sunan hydrafacial bakımlarıyla cildinize taze bir görünüm kazandırıyoruz.',
+    highlights: ['Derin temizlik', 'Yoğun nem desteği', 'Canlı görünüm'],
+    image: '/hizmetler/hydrafacial.png',
+  },
+  {
+    slug: 'akne-bakimi',
+    icon: FiShield,
+    title: 'Akne Bakımı',
+    description:
+      'Akneye eğilimli ciltler için arındırıcı ve dengeleyici uygulamalarla daha sakin ve temiz bir cilt görünümünü destekliyoruz.',
+    highlights: ['Arındırıcı bakım', 'Sebum dengeleme', 'Hassas cilt yaklaşımı'],
+    image: '/hizmetler/akne-bakimi.png',
   },
 ] as const;
 
@@ -167,14 +239,14 @@ const ServicesPage = () => {
                       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                         <Link
                           href={`/hizmetlerimiz/${service.slug}`}
-                          className="lale-gold-button gap-3"
+                          className="lale-gold-button gap-3 text-xs"
                         >
                           Detayları İncele
                           <FiArrowRight className="h-4 w-4" />
                         </Link>
                         <Link
                           href="/iletisim"
-                          className="lale-outline-button"
+                          className="lale-outline-button text-xs"
                         >
                           Randevu Oluştur
                         </Link>
